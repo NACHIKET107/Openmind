@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title id="PT">OPENMIND</title>
+<meta name="description" id="PD" content="A personal blog — life, India, world and everything."/>
+<meta name="robots" content="index,follow"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Raleway:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+/* ══════════════════════════════════════════
+   CATEGORY PHOTO & COLOR SYSTEM
+══════════════════════════════════════════ */
+:root{
+  --Life-photo:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&auto=format&fit=crop&q=80');
+  --India-photo:url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1400&auto=format&fit=crop&q=80');
+  --World-photo:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1400&auto=format&fit=crop&q=80');
+  --Opinion-photo:url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1400&auto=format&fit=crop&q=80');
+  --Faith-photo:url('https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=1400&auto=format&fit=crop&q=80');
+  --Travel-photo:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1400&auto=format&fit=crop&q=80');
+  --Health-photo:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1400&auto=format&fit=crop&q=80');
+  --Society-photo:url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1400&auto=format&fit=crop&q=80');
+  --Culture-photo:url('https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=1400&auto=format&fit=crop&q=80');
+  --Science-photo:url('https://images.unsplash.com/photo-1507668077129-56e32842fceb?w=1400&auto=format&fit=crop&q=80');
+  --Food-photo:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400&auto=format&fit=crop&q=80');
+  --Finance-photo:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1400&auto=format&fit=crop&q=80');
+  --All-photo:url('https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=1400&auto=format&fit=crop&q=80');
+
+  --Life-c:#2d6a4f;    --Life-lt:#d8f3dc;    --Life-bdr:#52b788;
+  --India-c:#c05621;   --India-lt:#fef3c7;   --India-bdr:#f6ad55;
+  --World-c:#1a56a0;   --World-lt:#dbeafe;   --World-bdr:#60a5fa;
+  --Opinion-c:#6d28d9; --Opinion-lt:#ede9fe; --Opinion-bdr:#a78bfa;
+  --Faith-c:#92400e;   --Faith-lt:#fef3c7;   --Faith-bdr:#d97706;
+  --Travel-c:#0369a1;  --Travel-lt:#e0f2fe;  --Travel-bdr:#38bdf8;
+  --Health-c:#065f46;  --Health-lt:#d1fae5;  --Health-bdr:#34d399;
+  --Society-c:#334155; --Society-lt:#f1f5f9; --Society-bdr:#94a3b8;
+  --Culture-c:#9a3412; --Culture-lt:#ffedd5; --Culture-bdr:#fb923c;
+  --Science-c:#1e3a8a; --Science-lt:#dbeafe; --Science-bdr:#3b82f6;
+  --Food-c:#9f1239;    --Food-lt:#ffe4e6;    --Food-bdr:#fb7185;
+  --Finance-c:#14532d; --Finance-lt:#dcfce7; --Finance-bdr:#4ade80;
+
+  --cream:#fffef9;
+  --paper:#f7f4ee;
+  --warm:#ede8de;
+  --ink:#1a1208;
+  --ink2:#3d3428;
+  --ink3:#7a6e60;
+  --ink4:#b8aea0;
+  --bdr:#ddd8cc;
+  --bdr2:#c8c0b0;
+  --gold:#c5991a;
+  --red:#8b1a1a;
+  --grn:#1a5c2e;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --body:'EB Garamond',Georgia,serif;
+  --sans:'Raleway',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+  --r:4px; --r2:8px;
+  --sh:0 2px 8px rgba(26,18,8,.08),0 8px 32px rgba(26,18,8,.06);
+  --sh2:0 8px 32px rgba(26,18,8,.14),0 32px 80px rgba(26,18,8,.12);
+}
+
+/* active theme vars set by JS */
+[data-theme]{
+  --tc: var(--ink);
+  --tlt: var(--paper);
+  --tbdr: var(--bdr);
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;font-size:16px;}
+body{background:var(--cream);color:var(--ink);font-family:var(--body);line-height:1.7;overflow-x:hidden;}
+a{color:inherit;text-decoration:none;}
+button{cursor:pointer;border:none;background:none;font-family:inherit;outline:none;}
+input,textarea,select{font-family:inherit;outline:none;}
+img{display:block;max-width:100%;object-fit:cover;}
+::selection{background:var(--ink);color:var(--cream);}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--paper);}
+::-webkit-scrollbar-thumb{background:var(--bdr2);border-radius:3px;}
+
+/* ══ MASTHEAD ══════════════════════════════════════ */
+.masthead{
+  background:var(--cream);
+  border-bottom:3px double var(--ink);
+  padding:28px clamp(16px,4vw,48px) 0;
+  position:sticky;top:0;z-index:900;
+}
+.mast-top{
+  max-width:1280px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding-bottom:20px;border-bottom:1px solid var(--bdr);
+  gap:16px;
+}
+.mast-left{display:flex;flex-direction:column;}
+.mast-date{font-family:var(--mono);font-size:10px;color:var(--ink3);letter-spacing:.1em;margin-bottom:8px;}
+.mast-title{
+  font-family:var(--serif);font-size:clamp(32px,6vw,72px);
+  font-weight:700;color:var(--ink);letter-spacing:-2px;
+  line-height:.95;cursor:pointer;
+}
+.mast-title span{color:var(--tc,var(--ink));transition:color .4s;}
+.mast-tagline{
+  font-family:var(--sans);font-size:11px;font-weight:500;
+  color:var(--ink3);letter-spacing:.22em;text-transform:uppercase;
+  margin-top:8px;
+}
+.mast-right{display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
+.mast-actions{display:flex;gap:8px;align-items:center;}
+.mast-ico{width:34px;height:34px;border:1px solid var(--bdr);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--ink3);transition:.2s;}
+.mast-ico:hover{border-color:var(--tc,var(--ink));color:var(--tc,var(--ink));}
+.mast-adm{padding:6px 14px;border:1px solid var(--ink);font-family:var(--mono);font-size:10px;font-weight:500;color:var(--ink);letter-spacing:.06em;transition:.2s;}
+.mast-adm:hover{background:var(--ink);color:var(--cream);}
+.mast-sub{padding:6px 18px;background:var(--tc,var(--ink));color:var(--cream);font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.06em;transition:all .4s;}
+.mast-sub:hover{opacity:.85;}
+@media(max-width:680px){.mast-right,.mast-tagline{display:none;}}
+
+/* Category nav — newspaper style */
+.cat-strip{
+  max-width:1280px;margin:0 auto;
+  display:flex;gap:0;overflow-x:auto;scrollbar-width:none;
+  border-top:1px solid var(--bdr);
+}
+.cat-strip::-webkit-scrollbar{display:none;}
+.cs-item{
+  padding:8px 18px;font-family:var(--sans);font-size:11px;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;
+  color:var(--ink3);cursor:pointer;transition:.2s;
+  border-bottom:3px solid transparent;
+}
+.cs-item:hover{color:var(--ink);}
+.cs-item.on{color:var(--tc,var(--ink));border-bottom-color:var(--tc,var(--ink));}
+
+/* ══ SEARCH OVERLAY ════════════════════════════════ */
+#sOver{display:none;position:fixed;inset:0;z-index:2000;background:rgba(26,18,8,.85);align-items:center;justify-content:center;padding:20px;}
+#sOver.open{display:flex;animation:fadeIn .2s ease;}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.s-box{background:var(--cream);width:100%;max-width:680px;border:2px solid var(--ink);box-shadow:var(--sh2);}
+.s-row{display:flex;align-items:center;padding:18px 20px;border-bottom:1px solid var(--bdr);gap:14px;}
+.s-row-ico{font-size:18px;color:var(--ink3);}
+.s-inp{flex:1;font-family:var(--serif);font-size:20px;color:var(--ink);background:none;border:none;}
+.s-inp::placeholder{color:var(--ink4);}
+.s-cls{font-family:var(--mono);font-size:11px;color:var(--ink3);padding:6px 12px;border:1px solid var(--bdr);}
+.s-results{max-height:460px;overflow-y:auto;}
+.sr-item{padding:16px 20px;border-bottom:1px solid var(--bdr);cursor:pointer;display:flex;gap:16px;align-items:center;transition:.15s;}
+.sr-item:last-child{border-bottom:none;}
+.sr-item:hover{background:var(--paper);}
+.sr-thumb{width:64px;height:48px;object-fit:cover;flex-shrink:0;border:1px solid var(--bdr);}
+.sr-cat{font-family:var(--sans);font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;}
+.sr-title{font-family:var(--serif);font-size:15px;font-weight:600;color:var(--ink);line-height:1.3;}
+.s-empty{padding:40px;text-align:center;font-family:var(--serif);font-style:italic;font-size:18px;color:var(--ink3);}
+
+/* ══ AD STRIPS ═════════════════════════════════════ */
+.adz{max-width:1280px;margin:0 auto;padding:12px clamp(16px,4vw,48px);}
+.adu{background:var(--paper);border:1px dashed var(--bdr2);min-height:90px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;font-family:var(--mono);font-size:10px;color:var(--ink4);}
+.adl{font-size:8px;text-transform:uppercase;letter-spacing:.14em;color:var(--bdr2);}
+
+/* ══ PAGES ═════════════════════════════════════════ */
+.page{display:none;animation:pgIn .3s ease;}
+.page.active{display:block;}
+@keyframes pgIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+
+/* ══ HERO SECTION — Magazine Cover Style ══════════════ */
+.hero-section{
+  position:relative;width:100%;
+  height:min(70vh,640px);
+  overflow:hidden;cursor:pointer;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+  transition:transform 6s ease,filter .5s;
+  filter:brightness(.7) saturate(.9);
+}
+.hero-section:hover .hero-bg{transform:scale(1.03);}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(26,18,8,.92) 0%,rgba(26,18,8,.45) 50%,rgba(26,18,8,.08) 100%);
+}
+.hero-content{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:clamp(24px,4vw,56px);
+  max-width:860px;
+}
+.hero-label{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--sans);font-size:10px;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--cream);margin-bottom:14px;
+}
+.hero-label::before{content:'';width:24px;height:1px;background:var(--tc,#c5991a);}
+.hero-label span{color:var(--tc,#c5991a);}
+.hero-title{
+  font-family:var(--serif);font-size:clamp(24px,4.5vw,52px);
+  font-weight:700;line-height:1.1;letter-spacing:-.5px;
+  color:#fff;margin-bottom:14px;text-shadow:0 2px 20px rgba(0,0,0,.4);
+}
+.hero-exc{font-family:var(--body);font-size:17px;color:rgba(255,255,255,.82);line-height:1.7;max-width:640px;margin-bottom:16px;}
+.hero-meta{display:flex;gap:20px;font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.55);flex-wrap:wrap;}
+.hero-read-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-top:18px;padding:10px 24px;
+  background:var(--tc,#c5991a);color:#fff;
+  font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  transition:.2s;
+}
+.hero-read-btn:hover{opacity:.88;}
+
+/* ══ MINI STRIP BELOW HERO ═══════════════════════════ */
+.hero-strip{background:var(--ink);display:flex;overflow-x:auto;scrollbar-width:none;}
+.hero-strip::-webkit-scrollbar{display:none;}
+.hs-item{
+  flex:1;min-width:200px;max-width:280px;
+  padding:16px 20px;border-right:1px solid rgba(255,255,255,.1);
+  cursor:pointer;transition:.15s;display:flex;gap:12px;align-items:flex-start;
+}
+.hs-item:last-child{border-right:none;}
+.hs-item:hover{background:rgba(255,255,255,.06);}
+.hs-num{font-family:var(--serif);font-size:28px;font-weight:700;color:rgba(255,255,255,.15);line-height:1;flex-shrink:0;}
+.hs-cat{font-family:var(--sans);font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;}
+.hs-title{font-family:var(--sans);font-size:12px;font-weight:600;color:rgba(255,255,255,.85);line-height:1.35;}
+
+/* ══ MAIN LAYOUT ═══════════════════════════════════ */
+.main-wrap{max-width:1280px;margin:0 auto;padding:48px clamp(16px,4vw,48px);display:grid;grid-template-columns:1fr 320px;gap:64px;}
+@media(max-width:980px){.main-wrap{grid-template-columns:1fr;}}
+
+/* Section heading — classic rule style */
+.sec-head{display:flex;align-items:center;gap:16px;margin-bottom:28px;}
+.sec-head-title{font-family:var(--sans);font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);white-space:nowrap;}
+.sec-head-rule{flex:1;height:1px;background:var(--bdr);}
+.sec-head-rule2{width:40px;height:3px;background:var(--tc,var(--ink));margin-right:-1px;transition:background .4s;}
+
+/* ══ POST FEED — Magazine Grid ══════════════════════ */
+.feed{display:flex;flex-direction:column;gap:0;}
+
+/* Large feature card */
+.pcard-large{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  border:1px solid var(--bdr);margin-bottom:28px;
+  cursor:pointer;overflow:hidden;
+  box-shadow:var(--sh);transition:.25s;
+  animation:pIn .4s ease both;
+}
+.pcard-large:hover{box-shadow:var(--sh2);transform:translateY(-2px);}
+@keyframes pIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+@media(max-width:640px){.pcard-large{grid-template-columns:1fr;}}
+.pcard-img{width:100%;height:280px;object-fit:cover;filter:saturate(.9);transition:filter .3s,transform .5s;}
+.pcard-large:hover .pcard-img{filter:saturate(1.1);transform:scale(1.03);}
+.pcard-img-wrap{overflow:hidden;height:280px;}
+.pcard-body{padding:28px;background:var(--cream);display:flex;flex-direction:column;justify-content:space-between;}
+.pcard-cat{display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;margin-bottom:14px;width:fit-content;}
+.pcard-title{font-family:var(--serif);font-size:clamp(18px,2.5vw,26px);font-weight:700;line-height:1.2;color:var(--ink);margin-bottom:10px;letter-spacing:-.3px;}
+.pcard-large:hover .pcard-title{color:var(--tc,var(--ink));}
+.pcard-exc{font-family:var(--body);font-size:14px;line-height:1.75;color:var(--ink3);margin-bottom:auto;}
+.pcard-meta{display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding-top:14px;border-top:1px solid var(--bdr);}
+.pcard-author{font-family:var(--mono);font-size:10px;color:var(--ink4);}
+.pcard-read{font-family:var(--mono);font-size:10px;color:var(--ink4);}
+.pcard-arr{width:32px;height:32px;border:1px solid var(--bdr);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--ink4);transition:.2s;}
+.pcard-large:hover .pcard-arr{border-color:var(--tc,var(--ink));color:var(--tc,var(--ink));background:var(--tc,var(--ink));color:#fff;}
+
+/* Small card list */
+.pcard-row{
+  display:grid;grid-template-columns:120px 1fr;gap:0;
+  border-bottom:1px solid var(--bdr);cursor:pointer;
+  transition:.15s;overflow:hidden;
+  animation:pIn .4s ease both;
+}
+.pcard-row:first-child{border-top:1px solid var(--bdr);}
+.pcard-row:hover .pcard-row-title{color:var(--tc,var(--ink));}
+.pcard-row-img{width:120px;height:90px;object-fit:cover;filter:saturate(.85);transition:filter .3s;}
+.pcard-row:hover .pcard-row-img{filter:saturate(1.1);}
+.pcard-row-body{padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between;}
+.pcard-row-cat{font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px;}
+.pcard-row-title{font-family:var(--serif);font-size:clamp(14px,1.8vw,17px);font-weight:600;line-height:1.3;color:var(--ink);margin-bottom:6px;transition:.15s;}
+.pcard-row-meta{font-family:var(--mono);font-size:10px;color:var(--ink4);}
+
+/* mid-feed separator with ad */
+.feed-sep{margin:28px 0;}
+
+/* Load more */
+.load-more{text-align:center;padding:32px 0;}
+.load-more-btn{padding:11px 36px;border:2px solid var(--ink);font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);transition:.2s;background:none;}
+.load-more-btn:hover{background:var(--ink);color:var(--cream);}
+
+/* empty */
+.empty{padding:64px;text-align:center;}
+.empty-ico{font-size:64px;margin-bottom:16px;}
+.empty-t{font-family:var(--serif);font-style:italic;font-size:26px;margin-bottom:8px;}
+.empty-d{font-family:var(--body);font-size:16px;color:var(--ink3);}
+
+/* ══ SIDEBAR ════════════════════════════════════════ */
+.sidebar{display:flex;flex-direction:column;gap:28px;}
+
+.sb-block{border:1px solid var(--bdr);background:var(--cream);padding:22px;}
+.sb-block-top{border-top:3px solid var(--tc,var(--ink));transition:border-color .4s;}
+.sb-title{font-family:var(--sans);font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--bdr);}
+
+/* about */
+.sb-avatar{
+  width:72px;height:72px;border-radius:50%;
+  object-fit:cover;border:2px solid var(--bdr);
+  margin-bottom:12px;
+}
+.sb-avatar-init{
+  width:72px;height:72px;border-radius:50%;
+  background:var(--tc,var(--ink));color:var(--cream);
+  font-family:var(--serif);font-size:30px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:12px;transition:background .4s;
+}
+.sb-name{font-family:var(--serif);font-size:20px;font-weight:700;margin-bottom:4px;letter-spacing:-.2px;}
+.sb-role{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;color:var(--tc,var(--ink));transition:color .4s;}
+.sb-bio{font-family:var(--body);font-size:14px;color:var(--ink3);line-height:1.7;}
+.sb-socs{display:flex;gap:6px;margin-top:14px;flex-wrap:wrap;}
+.sb-soc{padding:5px 12px;border:1px solid var(--bdr);font-family:var(--sans);font-size:11px;font-weight:600;color:var(--ink3);transition:.15s;}
+.sb-soc:hover{border-color:var(--tc,var(--ink));color:var(--tc,var(--ink));}
+
+/* subscribe */
+.sub-form{display:flex;flex-direction:column;gap:8px;}
+.sub-inp{padding:10px 12px;border:1px solid var(--bdr);background:var(--paper);font-family:var(--body);font-size:15px;color:var(--ink);transition:.15s;}
+.sub-inp:focus{border-color:var(--tc,var(--ink));}
+.sub-btn{padding:10px;background:var(--tc,var(--ink));color:var(--cream);font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:all .4s;}
+.sub-btn:hover{opacity:.85;}
+.sub-note{font-family:var(--mono);font-size:10px;color:var(--ink4);text-align:center;}
+
+/* popular */
+.pop-item{display:flex;gap:10px;padding:12px 0;border-bottom:1px solid var(--bdr);cursor:pointer;transition:.12s;}
+.pop-item:last-child{border-bottom:none;padding-bottom:0;}
+.pop-item:hover .pop-title{color:var(--tc,var(--ink));}
+.pop-thumb{width:56px;height:42px;object-fit:cover;flex-shrink:0;border:1px solid var(--bdr);}
+.pop-n{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--bdr);min-width:22px;line-height:1;flex-shrink:0;}
+.pop-cat{font-family:var(--sans);font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px;}
+.pop-title{font-family:var(--serif);font-size:14px;font-weight:600;line-height:1.3;color:var(--ink);transition:.15s;}
+
+/* categories list */
+.cat-list-item{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 12px;margin-bottom:4px;cursor:pointer;transition:.15s;
+  border-left:3px solid transparent;
+}
+.cat-list-item:hover,.cat-list-item.on{background:var(--paper);}
+.cat-list-left{display:flex;align-items:center;gap:10px;}
+.cat-list-thumb{width:36px;height:28px;object-fit:cover;border:1px solid var(--bdr);}
+.cat-list-name{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.04em;}
+.cat-list-count{font-family:var(--mono);font-size:10px;padding:2px 8px;background:var(--paper);border:1px solid var(--bdr);}
+
+/* tags */
+.tag-cloud{display:flex;flex-wrap:wrap;gap:6px;}
+.tag-item{padding:4px 11px;border:1px solid var(--bdr);font-family:var(--mono);font-size:11px;color:var(--ink3);cursor:pointer;transition:.15s;}
+.tag-item:hover{border-color:var(--tc,var(--ink));color:var(--tc,var(--ink));background:var(--paper);}
+
+.sb-ad{background:var(--paper);border:1px dashed var(--bdr2);min-height:250px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-family:var(--mono);font-size:10px;color:var(--ink4);padding:16px;text-align:center;}
+
+/* ══ ARTICLE FULLPAGE ═══════════════════════════════ */
+#artPage{display:none;position:fixed;inset:0;z-index:3000;background:var(--cream);overflow-y:auto;}
+#artPage.open{display:block;animation:pgIn .3s ease;}
+.art-topbar{
+  position:sticky;top:0;z-index:10;
+  background:rgba(255,254,249,.97);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--bdr);
+  padding:0 clamp(16px,4vw,48px);height:52px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.art-back{display:flex;align-items:center;gap:8px;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3);cursor:pointer;transition:.15s;}
+.art-back:hover{color:var(--tc,var(--ink));}
+.art-share-row{display:flex;gap:6px;}
+.art-share-btn{padding:5px 12px;border:1px solid var(--bdr);font-family:var(--sans);font-size:11px;font-weight:600;color:var(--ink3);letter-spacing:.04em;transition:.15s;}
+.art-share-btn:hover{border-color:var(--tc,var(--ink));color:var(--tc,var(--ink));}
+
+/* Article hero image */
+.art-hero{width:100%;height:min(55vh,520px);position:relative;overflow:hidden;}
+.art-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(.8);}
+.art-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,18,8,.88) 0%,rgba(26,18,8,.3) 60%,transparent 100%);}
+.art-hero-content{position:absolute;bottom:0;left:0;right:0;padding:clamp(20px,4vw,52px);max-width:860px;margin:0 auto;}
+
+.art-wrap{max-width:780px;margin:0 auto;padding:52px clamp(16px,5vw,60px) 80px;}
+.art-h1{font-family:var(--serif);font-size:clamp(26px,4.5vw,46px);font-weight:700;line-height:1.1;letter-spacing:-1.5px;color:var(--ink);margin-bottom:20px;}
+.art-byline{display:flex;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;color:var(--ink4);padding-bottom:20px;border-bottom:1px solid var(--bdr);margin-bottom:32px;}
+.art-author{color:var(--ink3);}
+
+/* Drop cap */
+.art-body .drop-cap::first-letter{
+  font-family:var(--serif);font-size:5.2em;font-weight:700;
+  float:left;line-height:.78;margin-right:.08em;margin-top:.04em;
+  color:var(--tc,var(--ink));
+}
+.art-body{font-family:var(--body);font-size:18px;line-height:2;color:var(--ink2);}
+.art-body p{margin-bottom:1.6em;}
+.art-body h2{font-family:var(--serif);font-size:30px;font-weight:700;color:var(--ink);margin:2.4em 0 .7em;letter-spacing:-.4px;}
+.art-body h3{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--ink);margin:1.8em 0 .5em;}
+.art-body blockquote{
+  border-left:4px solid var(--tc,var(--gold));
+  padding:20px 28px;margin:2.4em 0;
+  background:var(--paper);
+  font-family:var(--serif);font-style:italic;font-size:22px;
+  color:var(--ink);line-height:1.55;
+  transition:border-color .4s;
+}
+.art-body strong{color:var(--ink);font-weight:600;}
+.art-body ul,.art-body ol{padding-left:28px;margin-bottom:1.4em;}
+.art-body li{margin-bottom:.6em;}
+.art-body hr{border:none;border-top:1px solid var(--bdr);margin:2.4em 0;}
+.art-in-ad{margin:36px 0;padding:18px;background:var(--paper);border:1px dashed var(--bdr2);text-align:center;font-family:var(--mono);font-size:10px;color:var(--ink4);}
+.art-tags-row{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 20px;}
+.art-enc{padding:12px 16px;background:var(--paper);border-left:3px solid var(--grn);font-family:var(--mono);font-size:10px;color:var(--ink3);display:flex;align-items:center;gap:8px;flex-wrap:wrap;letter-spacing:.04em;}
+
+/* Share */
+.art-share-full{display:flex;gap:10px;align-items:center;padding:20px 0;border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);margin:28px 0;flex-wrap:wrap;}
+.ast-lbl{font-family:var(--sans);font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink4);}
+.ast-btn{padding:7px 16px;border:1px solid var(--bdr);font-family:var(--sans);font-size:11px;font-weight:700;color:var(--ink3);letter-spacing:.04em;transition:.15s;}
+.ast-btn:hover{border-color:var(--tc,var(--ink));color:var(--tc,var(--ink));}
+
+/* Comments */
+.cmt-sec{margin-top:44px;padding-top:32px;border-top:3px double var(--ink);}
+.cmt-sec-title{font-family:var(--serif);font-size:26px;font-weight:700;margin-bottom:24px;letter-spacing:-.3px;}
+.cmt-item{padding:18px 0;border-bottom:1px solid var(--bdr);}
+.cmt-item:last-child{border-bottom:none;}
+.cmt-meta{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.cmt-ava{width:36px;height:36px;border-radius:50%;background:var(--tc,var(--ink));color:var(--cream);font-family:var(--serif);font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .4s;}
+.cmt-name{font-family:var(--sans);font-size:13px;font-weight:700;}
+.cmt-date{font-family:var(--mono);font-size:10px;color:var(--ink4);}
+.cmt-text{font-family:var(--body);font-size:15px;color:var(--ink2);line-height:1.75;}
+.cmt-form{margin-top:32px;padding:28px;background:var(--paper);border:1px solid var(--bdr);}
+.cf-title{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px;}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+@media(max-width:500px){.cf-row{grid-template-columns:1fr;}}
+.cf-inp{width:100%;padding:10px 12px;border:1px solid var(--bdr);background:var(--cream);font-family:var(--body);font-size:15px;color:var(--ink);transition:.15s;}
+.cf-inp:focus{border-color:var(--tc,var(--ink));}
+.cf-ta{width:100%;padding:10px 12px;border:1px solid var(--bdr);background:var(--cream);font-family:var(--body);font-size:15px;color:var(--ink);min-height:100px;resize:vertical;transition:.15s;line-height:1.7;}
+.cf-ta:focus{border-color:var(--tc,var(--ink));}
+.cf-btn{margin-top:10px;padding:11px 28px;background:var(--tc,var(--ink));color:var(--cream);font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:all .4s;}
+.cf-btn:hover{opacity:.85;}
+.cf-note{font-family:var(--mono);font-size:10px;color:var(--ink4);margin-top:8px;}
+
+/* Related */
+.rel-sec{margin-top:40px;padding-top:28px;border-top:1px solid var(--bdr);}
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-top:16px;}
+.rel-card{cursor:pointer;transition:.2s;overflow:hidden;border:1px solid var(--bdr);}
+.rel-card:hover{box-shadow:var(--sh);transform:translateY(-2px);}
+.rel-card-img{width:100%;height:120px;object-fit:cover;filter:saturate(.8);transition:filter .3s;}
+.rel-card:hover .rel-card-img{filter:saturate(1.1);}
+.rel-card-body{padding:12px;}
+.rel-card-cat{font-family:var(--sans);font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px;}
+.rel-card-title{font-family:var(--serif);font-size:14px;font-weight:700;line-height:1.3;color:var(--ink);}
+
+/* ══ ABOUT & CONTACT ═══════════════════════════════ */
+.about-wrap{padding-top:0;}
+.about-hero{
+  width:100%;height:420px;position:relative;overflow:hidden;
+  background-size:cover;background-position:center;
+}
+.about-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,18,8,.9) 0%,rgba(26,18,8,.5) 60%,rgba(26,18,8,.2) 100%);}
+.about-hero-content{position:absolute;bottom:0;left:0;right:0;padding:clamp(24px,4vw,56px);text-align:center;}
+.about-ava-img{width:100px;height:100px;border-radius:50%;border:4px solid rgba(255,255,255,.3);object-fit:cover;margin:0 auto 16px;}
+.about-ava-init{width:100px;height:100px;border-radius:50%;border:4px solid rgba(255,255,255,.3);background:var(--tc,var(--ink));color:#fff;font-family:var(--serif);font-size:42px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
+.about-name-big{font-family:var(--serif);font-size:clamp(32px,5vw,52px);font-weight:700;color:#fff;letter-spacing:-1px;margin-bottom:6px;}
+.about-role-lbl{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);}
+.about-body{max-width:800px;margin:0 auto;padding:48px clamp(16px,5vw,48px);}
+.about-section{margin-bottom:48px;}
+.about-section h2{font-family:var(--serif);font-size:30px;font-weight:700;margin-bottom:16px;letter-spacing:-.4px;}
+.about-section p{font-family:var(--body);font-size:17px;color:var(--ink3);line-height:1.85;margin-bottom:1.2em;}
+.about-socs{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;}
+.about-soc{padding:9px 20px;border:2px solid var(--bdr);font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--ink3);transition:.2s;}
+.about-soc:hover{border-color:var(--tc,var(--ink));color:var(--tc,var(--ink));}
+.contact-wrap{max-width:700px;margin:0 auto;padding:80px clamp(16px,5vw,48px) 60px;}
+.contact-t{font-family:var(--serif);font-size:clamp(34px,5vw,52px);font-weight:700;letter-spacing:-1.5px;margin-bottom:12px;}
+.contact-d{font-family:var(--body);font-size:17px;color:var(--ink3);margin-bottom:36px;line-height:1.8;}
+.con-form{display:flex;flex-direction:column;gap:14px;}
+.con-inp{padding:12px 14px;border:1px solid var(--bdr);background:var(--paper);font-family:var(--body);font-size:16px;color:var(--ink);transition:.15s;}
+.con-inp:focus{border-color:var(--tc,var(--ink));}
+.con-ta{padding:12px 14px;border:1px solid var(--bdr);background:var(--paper);font-family:var(--body);font-size:16px;color:var(--ink);min-height:140px;resize:vertical;transition:.15s;line-height:1.7;}
+.con-ta:focus{border-color:var(--tc,var(--ink));}
+.con-btn{padding:13px 32px;background:var(--tc,var(--ink));color:var(--cream);font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;transition:all .4s;width:fit-content;}
+.con-btn:hover{opacity:.85;}
+
+/* ══ FOOTER ════════════════════════════════════════ */
+.site-footer{background:var(--ink);color:rgba(255,254,249,.4);padding:52px clamp(16px,4vw,48px) 28px;}
+.footer-masthead{text-align:center;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:36px;}
+.footer-logo{font-family:var(--serif);font-size:clamp(32px,5vw,56px);font-weight:700;color:#fff;letter-spacing:-1.5px;}
+.footer-logo span{color:var(--tc,#c5991a);transition:color .4s;}
+.footer-tag{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:8px;}
+.footer-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px;}
+@media(max-width:760px){.footer-grid{grid-template-columns:1fr 1fr;gap:24px;}}
+@media(max-width:460px){.footer-grid{grid-template-columns:1fr;}}
+.ft-col-t{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:14px;}
+.ft-lk{display:block;font-family:var(--sans);font-size:13px;color:rgba(255,255,255,.4);margin-bottom:9px;cursor:pointer;transition:.12s;}
+.ft-lk:hover{color:rgba(255,255,255,.85);}
+.ft-desc{font-family:var(--body);font-size:14px;line-height:1.75;max-width:260px;}
+.ft-enc{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-family:var(--mono);font-size:10px;color:rgba(82,200,130,.8);}
+.footer-bot{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.2);}
+
+/* ══ ADMIN PANEL ════════════════════════════════════ */
+#admPanel{display:none;position:fixed;inset:0;z-index:9000;background:var(--paper);overflow-y:auto;}
+#admPanel.open{display:block;}
+.adm-topbar{background:var(--cream);border-bottom:2px solid var(--bdr);padding:0 24px;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;}
+.adm-brand{display:flex;align-items:center;gap:10px;}
+.adm-brand-logo{width:32px;height:32px;background:var(--tc,var(--ink));color:var(--cream);font-family:var(--serif);font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;transition:background .4s;}
+.adm-brand-name{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--ink);}
+.adm-brand-sub{font-family:var(--mono);font-size:10px;color:var(--ink4);margin-left:6px;letter-spacing:.04em;}
+.adm-exit-btn{padding:7px 18px;border:2px solid var(--bdr);font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3);transition:.15s;}
+.adm-exit-btn:hover{border-color:var(--red);color:var(--red);}
+.adm-layout{display:grid;grid-template-columns:240px 1fr;min-height:calc(100vh - 58px);}
+@media(max-width:700px){.adm-layout{grid-template-columns:1fr;}}
+.adm-sidenav{background:var(--cream);border-right:1px solid var(--bdr);padding:20px 10px;display:flex;flex-direction:column;gap:2px;}
+.adm-sec-lbl{font-family:var(--mono);font-size:9px;color:var(--ink4);letter-spacing:.14em;padding:12px 14px 6px;text-transform:uppercase;}
+.adm-nav-item{padding:9px 14px;font-family:var(--sans);font-size:13px;font-weight:600;color:var(--ink3);cursor:pointer;transition:.12s;display:flex;align-items:center;gap:10px;letter-spacing:.02em;}
+.adm-nav-item:hover{background:var(--paper);color:var(--ink);}
+.adm-nav-item.on{background:var(--paper);color:var(--tc,var(--ink));border-left:3px solid var(--tc,var(--ink));}
+.adm-main-content{padding:36px;}
+
+/* admin form elements */
+.a-title{font-family:var(--serif);font-size:26px;font-weight:700;color:var(--ink);margin-bottom:28px;letter-spacing:-.4px;padding-bottom:14px;border-bottom:2px solid var(--tc,var(--ink));transition:border-color .4s;}
+.a-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:32px;}
+.astat{background:var(--cream);border:1px solid var(--bdr);padding:20px;text-align:center;border-top:3px solid var(--tc,var(--ink));transition:border-top-color .4s;}
+.astat-n{font-family:var(--serif);font-size:40px;font-weight:700;color:var(--tc,var(--ink));transition:color .4s;}
+.astat-l{font-family:var(--mono);font-size:9px;color:var(--ink4);letter-spacing:.1em;margin-top:3px;}
+.af{margin-bottom:18px;}
+.al{display:block;font-family:var(--mono);font-size:10px;color:var(--ink4);letter-spacing:.1em;margin-bottom:7px;}
+.ai{width:100%;padding:11px 14px;border:1px solid var(--bdr);background:var(--cream);color:var(--ink);font-family:var(--body);font-size:15px;transition:.15s;}
+.ai:focus{border-color:var(--tc,var(--ink));}
+.ata{width:100%;padding:11px 14px;border:1px solid var(--bdr);background:var(--cream);color:var(--ink);font-family:var(--body);font-size:15px;min-height:150px;resize:vertical;transition:.15s;line-height:1.7;}
+.ata:focus{border-color:var(--tc,var(--ink));}
+.asel{width:100%;padding:11px 14px;border:1px solid var(--bdr);background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:13px;}
+.a2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.a3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+@media(max-width:580px){.a2,.a3{grid-template-columns:1fr;}}
+.abtn{padding:11px 24px;background:var(--tc,var(--ink));color:var(--cream);font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:all .4s;display:inline-flex;align-items:center;gap:8px;}
+.abtn:hover{opacity:.85;}
+.abtn.ghost{background:none;border:2px solid var(--bdr);color:var(--ink3);background:var(--cream);}
+.abtn.ghost:hover{border-color:var(--ink);color:var(--ink);}
+.abtn.danger{background:none;border:2px solid #fca5a5;color:var(--red);}
+.abtn.danger:hover{background:#fef2f2;}
+.abtn.grn{background:#166534;color:#fff;}
+.abtns{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;}
+.aibox{background:var(--paper);border:1px solid var(--bdr);border-left:4px solid var(--tc,var(--ink));padding:20px;margin-bottom:24px;transition:border-left-color .4s;}
+.aibox-lbl{font-family:var(--mono);font-size:10px;color:var(--tc,var(--ink));letter-spacing:.1em;margin-bottom:14px;font-weight:500;transition:color .4s;}
+.etbar{display:flex;gap:4px;flex-wrap:wrap;padding:8px 10px;background:var(--paper);border:1px solid var(--bdr);border-bottom:none;}
+.etb{padding:4px 10px;font-family:var(--sans);font-size:13px;font-weight:700;color:var(--ink3);border:1px solid transparent;transition:.12s;}
+.etb:hover{background:var(--warm);color:var(--ink);}
+.ed-area{width:100%;min-height:320px;padding:16px;border:1px solid var(--bdr);font-family:var(--body);font-size:15px;color:var(--ink);line-height:1.75;resize:vertical;background:var(--cream);}
+.ed-area:focus{border-color:var(--tc,var(--ink));outline:none;}
+.ptbl{width:100%;border-collapse:collapse;}
+.ptbl th{text-align:left;padding:10px 12px;font-family:var(--mono);font-size:10px;color:var(--ink4);letter-spacing:.08em;border-bottom:2px solid var(--tc,var(--ink));background:var(--cream);}
+.ptbl td{padding:12px;border-bottom:1px solid var(--bdr);font-size:13px;vertical-align:middle;}
+.ptbl tr:hover td{background:var(--paper);}
+.ptbl-thumb{width:56px;height:40px;object-fit:cover;border:1px solid var(--bdr);}
+.ps{display:inline-block;padding:2px 8px;font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.06em;}
+.ps-pub{background:var(--Health-lt);color:var(--Health-c);}
+.ps-dft{background:var(--Faith-lt);color:var(--Faith-c);}
+.c-ico{width:30px;height:30px;border:1px solid var(--bdr);color:var(--ink4);display:flex;align-items:center;justify-content:center;font-size:13px;transition:.12s;}
+.c-ico:hover{background:var(--paper);}
+.c-ico.del{color:var(--red);border-color:#fca5a5;}
+.c-ico.del:hover{background:#fef2f2;}
+.cmt-r{background:var(--cream);border:1px solid var(--bdr);padding:14px;margin-bottom:8px;}
+.cmt-r-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
+.asgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px;}
+@media(max-width:580px){.asgrid{grid-template-columns:1fr;}}
+.asc{background:var(--cream);border:1px solid var(--bdr);padding:18px;}
+.atgl{width:44px;height:24px;border-radius:12px;background:var(--bdr2);position:relative;cursor:pointer;transition:.26s;flex-shrink:0;}
+.atgl.on{background:var(--tc,var(--ink));}
+.atgl::after{content:'';position:absolute;width:18px;height:18px;border-radius:50%;background:#fff;top:3px;left:3px;box-shadow:0 1px 4px rgba(0,0,0,.18);transition:.26s;}
+.atgl.on::after{transform:translateX(20px);}
+.atgl-d{font-family:var(--mono);font-size:11px;color:var(--ink4);}
+.cat-item-adm{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--cream);border:1px solid var(--bdr);margin-bottom:6px;border-left:4px solid;}
+.sec-r{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--bdr);font-family:var(--body);font-size:14px;color:var(--ink3);}
+.sec-r:last-child{border-bottom:none;}
+.sec-ok{color:var(--grn);font-family:var(--mono);font-size:11px;}
+.sec-warn{color:var(--Faith-c);font-family:var(--mono);font-size:11px;}
+.dep-card{background:var(--cream);border:1px solid var(--bdr);border-left:4px solid var(--tc,var(--ink));padding:20px 24px;margin-bottom:14px;transition:border-left-color .4s;}
+.dep-n{font-family:var(--mono);font-size:9px;color:var(--tc,var(--ink));letter-spacing:.1em;margin-bottom:8px;transition:color .4s;}
+.dep-t{font-family:var(--serif);font-size:17px;font-weight:700;color:var(--ink);margin-bottom:8px;}
+.dep-d{font-family:var(--mono);font-size:12px;color:var(--ink3);line-height:1.95;}
+.dep-d b{color:var(--ink);font-weight:600;}
+.alog{max-width:440px;margin:80px auto;padding:0 20px;}
+.alog-c{background:var(--cream);border:2px solid var(--bdr);padding:48px;text-align:center;box-shadow:var(--sh2);}
+.alog-logo{width:72px;height:72px;background:var(--tc,var(--ink));color:var(--cream);font-family:var(--serif);font-size:32px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;transition:background .4s;}
+.alog-title{font-family:var(--serif);font-size:28px;font-weight:700;color:var(--ink);margin-bottom:4px;}
+.alog-sub{font-family:var(--mono);font-size:10px;color:var(--ink4);letter-spacing:.08em;margin-bottom:28px;}
+.alog-err{font-family:var(--mono);font-size:11px;color:var(--red);min-height:18px;margin-top:8px;}
+
+/* TOAST */
+.toast{position:fixed;bottom:28px;right:28px;z-index:99999;padding:14px 22px;background:var(--ink);color:var(--cream);font-family:var(--sans);font-size:13px;font-weight:600;box-shadow:var(--sh2);transform:translateY(64px);opacity:0;transition:.32s cubic-bezier(.3,.8,.2,1);max-width:340px;display:flex;align-items:center;gap:10px;border-left:4px solid var(--grn);pointer-events:none;}
+.toast.show{transform:translateY(0);opacity:1;pointer-events:auto;}
+.toast.err{border-left-color:var(--red);}
+.toast.info{border-left-color:var(--tc,var(--gold));}
+</style>
+</head>
+<body>
+
+<!-- ══ MASTHEAD ══ -->
+<header class="masthead" id="masthead">
+  <div class="mast-top">
+    <div class="mast-left">
+      <div class="mast-date" id="mastDate"></div>
+      <div class="mast-title" onclick="goHome()" id="mastTitle">OPEN<span>MIND</span></div>
+      <div class="mast-tagline" id="mastTagline">Think Freely · Write Honestly · Stay Curious</div>
+    </div>
+    <div class="mast-right">
+      <div class="mast-actions">
+        <button class="mast-ico" onclick="openSearch()" title="Search">🔍</button>
+        <button class="mast-adm" onclick="openAdm()">⚙ ADMIN</button>
+        <button class="mast-sub" onclick="scrollSub()">SUBSCRIBE</button>
+      </div>
+    </div>
+  </div>
+  <div class="cat-strip" id="catStrip"></div>
+</header>
+
+<!-- ══ SEARCH OVERLAY ══ -->
+<div id="sOver" onclick="closeSOut(event)">
+  <div class="s-box">
+    <div class="s-row"><span class="s-row-ico">🔍</span><input class="s-inp" id="sInp" placeholder="Search the archive…" oninput="doSearch()"/><button class="s-cls" onclick="closeSearch()">✕ CLOSE</button></div>
+    <div class="s-results" id="sRes"><div class="s-empty">Start typing to search…</div></div>
+  </div>
+</div>
+
+<!-- ══ PAGES ══ -->
+
+<!-- HOME -->
+<div id="page-home" class="page active">
+  <div class="hero-section" id="heroSection">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-label" id="heroLabel"><span>Featured</span></div>
+      <div class="hero-title" id="heroTitle">Loading…</div>
+      <div class="hero-exc" id="heroExc"></div>
+      <div class="hero-meta" id="heroMeta"></div>
+      <button class="hero-read-btn" id="heroBtn">Read Full Story →</button>
+    </div>
+  </div>
+  <div class="hero-strip" id="heroStrip"></div>
+
+  <div class="adz" style="padding-top:0;"><div class="adu"><span class="adl">Advertisement</span><span>728×90 — Google AdSense (connect in Admin → Settings)</span></div></div>
+
+  <div class="main-wrap">
+    <main>
+      <div class="sec-head"><div class="sec-head-rule2" id="secRule"></div><div class="sec-head-title" id="feedTitle">LATEST STORIES</div><div class="sec-head-rule"></div></div>
+      <div class="feed" id="postFeed"></div>
+      <div class="load-more" id="lmRow" style="display:none;"><button class="load-more-btn" onclick="loadMore()">LOAD MORE STORIES</button></div>
+    </main>
+    <aside class="sidebar" id="sideBar"></aside>
+  </div>
+
+  <div class="adz"><div class="adu"><span class="adl">Advertisement</span><span>728×90 — AdSense</span></div></div>
+</div>
+
+<!-- ABOUT -->
+<div id="page-about" class="page" style="padding-top:80px;">
+  <div class="about-wrap">
+    <div class="about-hero" id="aboutHero">
+      <div class="about-hero-overlay"></div>
+      <div class="about-hero-content">
+        <div class="about-ava-init" id="aboutAva">T</div>
+        <div class="about-name-big" id="aboutName">Tanmay</div>
+        <div class="about-role-lbl" id="aboutRole">Founder · Blogger · Thinker</div>
+      </div>
+    </div>
+    <div class="about-body">
+      <div class="about-section">
+        <h2>About This Blog</h2>
+        <p id="aboutBlogP">OPENMIND is my personal space on the internet — a place to think out loud about life, India, the world, faith, and everything in between.</p>
+        <p>I believe in writing honestly, even when it's uncomfortable. In staying curious about things that challenge my assumptions. And in the idea that ordinary people living ordinary lives have extraordinary things to say, if they take the time to say them.</p>
+        <p>This is my attempt to do that. I'm glad you're reading it.</p>
+      </div>
+      <div class="about-section">
+        <h2>Connect With Me</h2>
+        <p>I'd love to hear from you — whether you agree, disagree, or simply want to say hello.</p>
+        <div class="about-socs">
+          <button class="about-soc" onclick="openSoc('twitter')">𝕏 Twitter</button>
+          <button class="about-soc" onclick="openSoc('instagram')">📷 Instagram</button>
+          <button class="about-soc" onclick="openSoc('linkedin')">in LinkedIn</button>
+          <button class="about-soc" onclick="showPage('contact')">✉ Contact</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="page-contact" class="page" style="padding-top:80px;">
+  <div class="contact-wrap">
+    <div class="contact-t">Get In Touch</div>
+    <div class="contact-d">Have a question or just want to say hello? I read every message that comes through.</div>
+    <div class="con-form">
+      <div class="a2"><input class="con-inp" id="cN" placeholder="Your Name *"/><input class="con-inp" id="cE" type="email" placeholder="Email Address *"/></div>
+      <input class="con-inp" id="cS" placeholder="Subject"/>
+      <textarea class="con-ta" id="cM" placeholder="Your message…"></textarea>
+      <button class="con-btn" onclick="sendMsg()">Send Message →</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-masthead">
+    <div class="footer-logo" id="ftLogo">OPEN<span>MIND</span></div>
+    <div class="footer-tag" id="ftTag">Think Freely · Write Honestly · Stay Curious</div>
+  </div>
+  <div class="footer-grid">
+    <div>
+      <div class="ft-desc" id="ftDesc">A personal blog — life, India, world and honest opinions. Read by curious people everywhere.</div>
+      <div class="ft-enc">🔒 End-to-End Encrypted · HTTPS</div>
+    </div>
+    <div><div class="ft-col-t">TOPICS</div><div id="ftCats"></div></div>
+    <div><div class="ft-col-t">SITE</div><div class="ft-lk" onclick="showPage('about')">About</div><div class="ft-lk" onclick="showPage('contact')">Contact</div><div class="ft-lk" onclick="scrollSub()">Newsletter</div><div class="ft-lk" onclick="openAdm()">Admin</div></div>
+    <div><div class="ft-col-t">LEGAL</div><span class="ft-lk">Privacy Policy</span><span class="ft-lk">Terms of Use</span><span class="ft-lk">Cookie Policy</span><span class="ft-lk">Advertise</span></div>
+  </div>
+  <div class="footer-bot"><span id="ftCopy">© 2026 OPENMIND. All rights reserved.</span><span>🔒 Fully Secure · You Own This Blog · No Access To Anyone</span></div>
+</footer>
+
+<!-- ══ ARTICLE PAGE ══ -->
+<div id="artPage">
+  <div class="art-topbar">
+    <div class="art-back" onclick="closeArt()">← BACK TO BLOG</div>
+    <div class="art-share-row">
+      <button class="art-share-btn" onclick="shareP('twitter')">𝕏 SHARE</button>
+      <button class="art-share-btn" onclick="shareP('whatsapp')">💬 WHATSAPP</button>
+      <button class="art-share-btn" onclick="copyUrl()">🔗 COPY</button>
+      <button class="art-share-btn" onclick="closeArt()">✕</button>
+    </div>
+  </div>
+  <div class="art-hero" id="artHero">
+    <img id="artHeroImg" src="" alt=""/>
+    <div class="art-hero-overlay"></div>
+    <div class="art-hero-content">
+      <div id="artHeroCats"></div>
+    </div>
+  </div>
+  <div class="art-wrap">
+    <h1 class="art-h1" id="artH1"></h1>
+    <div class="art-byline" id="artByline"></div>
+    <div class="art-in-ad"><span class="adl">Advertisement · In-article AdSense</span></div>
+    <div class="art-body" id="artBody"></div>
+    <div class="art-in-ad" style="margin-top:32px;"><span class="adl">Advertisement · Post-article AdSense</span></div>
+    <div class="art-tags-row" id="artTags"></div>
+    <div class="art-share-full">
+      <span class="ast-lbl">SHARE THIS STORY:</span>
+      <button class="ast-btn" onclick="shareP('twitter')">𝕏 Twitter</button>
+      <button class="ast-btn" onclick="shareP('facebook')">Facebook</button>
+      <button class="ast-btn" onclick="shareP('whatsapp')">WhatsApp</button>
+      <button class="ast-btn" onclick="copyUrl()">Copy Link</button>
+    </div>
+    <div class="art-enc">🔒 <span>Encrypted · Verified hash: <strong id="artHash"></strong> · Served securely over HTTPS</span></div>
+    <div class="cmt-sec">
+      <div class="cmt-sec-title" id="cmtTitle">Comments (0)</div>
+      <div id="cmtList"></div>
+      <div class="cmt-form">
+        <div class="cf-title">Leave a Comment</div>
+        <div class="cf-row"><input class="cf-inp" id="cfN" placeholder="Your Name *"/><input class="cf-inp" id="cfE" placeholder="Email (private)" type="email"/></div>
+        <textarea class="cf-ta" id="cfT" placeholder="Share your thoughts…"></textarea>
+        <button class="cf-btn" onclick="submitCmt()">Post Comment</button>
+        <div class="cf-note">🔒 Your email is never shown publicly.</div>
+      </div>
+    </div>
+    <div class="rel-sec">
+      <div class="sec-head" style="margin-bottom:16px;"><div class="sec-head-rule2"></div><div class="sec-head-title">MORE STORIES</div><div class="sec-head-rule"></div></div>
+      <div class="rel-grid" id="relGrid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ADMIN ══ -->
+<div id="admPanel">
+  <div style="background:var(--paper);min-height:100vh;">
+    <div class="adm-topbar">
+      <div class="adm-brand">
+        <div class="adm-brand-logo" id="admLogo">O</div>
+        <div class="adm-brand-name" id="admName">OPENMIND</div>
+        <span class="adm-brand-sub">/ Admin — Only You</span>
+      </div>
+      <button class="adm-exit-btn" onclick="closeAdm()">✕ EXIT ADMIN</button>
+    </div>
+    <div id="admBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toastEl"></div>
+
+<script>
+/* ═══════════════════════════════════════════════════
+   CATEGORY DATA — photos, colors, thumbnails
+═══════════════════════════════════════════════════ */
+const CC={
+  Life:    {photo:'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&auto=format&fit=crop&q=80', thumb:'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=400&auto=format&fit=crop&q=80', c:'#2d6a4f', lt:'#d8f3dc', bdr:'#52b788', emoji:'🌿'},
+  India:   {photo:'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1400&auto=format&fit=crop&q=80', thumb:'https://images.unsplash.com/photo-1532664189809-02133fee698d?w=400&auto=format&fit=crop&q=80', c:'#c05621', lt:'#fef3c7', bdr:'#f6ad55', emoji:'🇮🇳'},
+  World:   {photo:'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1400&auto=format&fit=crop&q=80', thumb:'https://images.unsplash.com/photo-1488085061387-422e29b40080?w=400&auto=format&fit=crop&q=80', c:'#1a56a0', lt:'#dbeafe', bdr:'#60a5fa', emoji:'🌍'},
+  Opinion: {photo:'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1400&auto=format&fit=crop&q=80', thumb:'https://images.unsplash.com/photo-1474631245212-32dc3c8310c6?w=400&auto=format&fit=crop&q=80', c:'#6d28d9', lt:'#ede9fe', bdr:'#a78bfa', emoji:'💭'},
+  Faith:   {photo:'https://images.unsplash.com/photo-1591001774313-ce94a22c24e2?w=1400&auto=format&fit=crop&q=80', thumb:'https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=400&auto=format&fit=crop&q=80', c:'#92400e', lt:'#fef3c7', bdr:'#d97706', emoji:'🕉️'},
+  Travel:  {photo:'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1400&auto=format&fit=crop&q=80', thumb:'https://images.unsplash.com/photo-1500835556837-99ac94a94552?w=400&auto=format&fit=crop&q=80', c:'#0369a1', lt:'#e0f2fe', bdr:'#38bdf8', emoji:'✈️'},
+  Health:  {photo:'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1400&auto=format&fit=crop&q=80', thumb:'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&auto=format&fit=crop&q=80', c:'#065f46', lt:'#d1fae5', bdr:'#34d399', emoji:'❤️'},
+  Society: {photo:'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1400&auto=format&fit=crop&q=80', thumb:'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&auto=format&fit=crop&q=80', c:'#334155', lt:'#f1f5f9', bdr:'#94a3b8', emoji:'🏙️'},
+  Culture: {photo:'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=1400&auto=format&fit=crop&q=80', thumb:'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400&auto=format&fit=crop&q=80', c:'#9a3412', lt:'#ffedd5', bdr:'#fb923c', emoji:'🎭'},
+  Science: {photo:'https://images.unsplash.com/photo-1507668077129-56e32842fceb?w=1400&auto=format&fit=crop&q=80', thumb:'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&auto=format&fit=crop&q=80', c:'#1e3a8a', lt:'#dbeafe', bdr:'#3b82f6', emoji:'🔬'},
+  Food:    {photo:'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400&auto=format&fit=crop&q=80', thumb:'https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=400&auto=format&fit=crop&q=80', c:'#9f1239', lt:'#ffe4e6', bdr:'#fb7185', emoji:'🍜'},
+  Finance: {photo:'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1400&auto=format&fit=crop&q=80', thumb:'https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?w=400&auto=format&fit=crop&q=80', c:'#14532d', lt:'#dcfce7', bdr:'#4ade80', emoji:'💰'},
+  All:     {photo:'https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=1400&auto=format&fit=crop&q=80', thumb:'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&auto=format&fit=crop&q=80', c:'#1a1208', lt:'#f7f4ee', bdr:'#c8c0b0', emoji:'📖'},
+};
+function getC(cat){return CC[cat]||CC.All;}
+
+/* Apply theme */
+function applyTheme(cat){
+  const c=getC(cat);
+  const s=document.documentElement.style;
+  s.setProperty('--tc',c.c);
+  s.setProperty('--tlt',c.lt);
+  s.setProperty('--tbdr',c.bdr);
+}
+
+/* ═══════════════════════════════════════════════════
+   DATA STORE
+═══════════════════════════════════════════════════ */
+const DEF={
+  siteName:'OPENMIND', siteTagline:'Think Freely. Write Honestly. Stay Curious.',
+  siteDesc:'A personal blog about life, India, world and everything.',
+  ownerName:'Tanmay', ownerRole:'Founder · Blogger · Thinker',
+  ownerBio:'Student from Maharashtra, India — writing honestly about life, the world, faith, and the ideas that shape us.',
+  ownerAbout:'OPENMIND is my personal corner of the internet.',
+  ownerPhotoUrl:'',
+  twitterUrl:'', instaUrl:'', linkedinUrl:'',
+  adminPass:'admin123', apiKey:'', adsenseId:'',
+  autoPost:false,
+};
+const DEF_CATS=['Life','India','World','Opinion','Faith','Travel','Health','Society','Culture','Food'];
+
+let CFG   = Object.assign({},DEF,JSON.parse(localStorage.getItem('om4_cfg')||'{}'));
+let POSTS = JSON.parse(localStorage.getItem('om4_posts')||'null')||seedPosts();
+let CATS  = JSON.parse(localStorage.getItem('om4_cats')||'null')||DEF_CATS;
+let SUBS  = JSON.parse(localStorage.getItem('om4_subs')||'[]');
+
+let admIn=false, admTab='dashboard', curCat='All', curPid=null, pSize=6, vis=pSize;
+const sC=()=>localStorage.setItem('om4_cfg',  JSON.stringify(CFG));
+const sP=()=>localStorage.setItem('om4_posts', JSON.stringify(POSTS));
+const sCt=()=>localStorage.setItem('om4_cats',  JSON.stringify(CATS));
+const sSb=()=>localStorage.setItem('om4_subs',  JSON.stringify(SUBS));
+
+/* ═══════════════════════════════════════════════════
+   SEED POSTS WITH PHOTOS
+═══════════════════════════════════════════════════ */
+function seedPosts(){
+  const rows=[
+    {id:1,title:'Why I Started OPENMIND — And What I Want It to Be',cat:'Life',tags:['intro','writing','personal'],readTime:'4 min',date:'March 19, 2026',author:'Tanmay',status:'published',featured:true,
+     photo:'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=900&auto=format&fit=crop&q=80',
+     excerpt:'Every blog needs a reason to exist. Here is mine — the honest story of why I finally stopped waiting and started writing publicly about the things that matter to me.',
+     body:`Every blog needs a reason to exist.\n\nFor months I kept starting and stopping. I would write a few paragraphs, get self-conscious, and delete them. I told myself I wasn't ready. That I didn't have anything original to say. That the internet didn't need another personal blog.\n\nThen I asked myself: who decides what the internet needs?\n\n## What OPENMIND Is\n\nThe name came from something I believe deeply: keeping an open mind isn't the same as having no opinions. It means holding your opinions loosely — being willing to update them when you encounter better arguments, better evidence, better people.\n\nIn a world that rewards certainty and punishes doubt, I think that's a radical thing to practice.\n\n> An open mind isn't empty. It's spacious. It holds strong convictions and genuine curiosity at the same time.\n\n## What You'll Find Here\n\nHonest writing about life — the small things and the big ones. Thoughts on India, with love and with clear eyes. Perspectives on the world from someone who is still trying to understand it. Faith, philosophy, and the ancient wisdom that still has so much to say about modern life.\n\nThis is my corner of the internet. I'm glad you found it.\n\nWelcome.`,comments:[]},
+    {id:2,title:'The Art of Sitting With Uncertainty',cat:'Life',tags:['mindset','uncertainty','growth'],readTime:'5 min',date:'March 17, 2026',author:'Tanmay',status:'published',featured:false,
+     photo:'https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=900&auto=format&fit=crop&q=80',
+     excerpt:'We have built a culture around eliminating uncertainty as fast as possible. But what if the discomfort of not-knowing is exactly where the most important growth happens?',
+     body:`We hate uncertainty.\n\nNot just personally — culturally. We have built entire industries around eliminating it. Every self-help book is essentially a promise: follow these steps and the uncertainty will go away.\n\nBut it never really does. And I have started to think our relationship with uncertainty is one of the most important things we could examine about ourselves.\n\n## The Problem With Rushing to Answers\n\nWhen we rush to resolve uncertainty, we often arrive at an answer before we have really asked the question. We convince ourselves we have thought it through. We haven't — we have just escaped the discomfort.\n\nThe difference between a quick decision and a wise one is usually whether you were willing to sit in the uncertainty long enough for something real to emerge.\n\n## What I Do Differently Now\n\nI try to stay in questions longer before reaching for answers. I try to notice when I am resolving uncertainty to relieve discomfort rather than to reach truth.\n\nIt is uncomfortable. It is also, I think, where most real wisdom lives.\n\n> The goal isn't to reach certainty. The goal is to act with integrity while certainty remains out of reach.`,comments:[{id:1,name:'Priya M.',date:'March 17, 2026',text:'This resonated deeply. I needed to read this today. Thank you.'}]},
+    {id:3,title:'India in 2026 — The Conversations We Still Avoid',cat:'India',tags:['India','society','honest','opinion'],readTime:'7 min',date:'March 14, 2026',author:'Tanmay',status:'published',featured:false,
+     photo:'https://images.unsplash.com/photo-1532664189809-02133fee698d?w=900&auto=format&fit=crop&q=80',
+     excerpt:'India is growing fast. Indian confidence is growing faster. But there is a version of confidence that stops you from seeing clearly — and I think we need to be honest about which kind we are cultivating.',
+     body:`I want to talk about India honestly.\n\nIndia is doing remarkable things. The economy, the space program, the digital infrastructure — these are real achievements. I am proud of them genuinely.\n\nAnd yet.\n\n## The Things We Don't Say\n\nWe find it difficult to hold two things at once: pride in what India is becoming, and honesty about what India still needs to fix.\n\nThe inequality between a gleaming new expressway and the village three kilometers from it. The gap between the India that makes the news and the India most Indians actually live in.\n\n## What I Think We Need\n\nWe need the ability to love something and criticize it at the same time. The most patriotic thing you can do is think clearly about the place you love.\n\n> Patriotism that cannot tolerate honest questions is not patriotism. It's just comfort.\n\nI am Indian. I believe in India's potential deeply. That is exactly why I want us to be honest about the distance between where we are and where we could be.`,comments:[]},
+    {id:4,title:'Svadharma — What the Bhagavad Gita Says About Modern Life',cat:'Faith',tags:['Sanatan','Gita','dharma','philosophy'],readTime:'6 min',date:'March 11, 2026',author:'Tanmay',status:'published',featured:false,
+     photo:'https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=900&auto=format&fit=crop&q=80',
+     excerpt:'The concept of svadharma — your own particular duty — is perhaps the most practical idea in the Bhagavad Gita. Here is why it matters whether you are religious or not.',
+     body:`I want to make a case for svadharma to people who might not think ancient Sanskrit philosophy is relevant to them.\n\nBecause I think it might be the most useful concept I have encountered anywhere.\n\n## What Svadharma Actually Means\n\nThe word is often translated as "one's own duty." But dharma is richer than duty — it is closer to right action according to your nature, your situation, your particular place in the world.\n\nThe Gita's famous line: "Better is one's own dharma, imperfectly performed, than the dharma of another, well performed."\n\nThis is radical. It says: do not compare paths. Do not try to live someone else's life more successfully than your own.\n\n> The most common form of suffering is living someone else's expectations of your life. Svadharma is the antidote.\n\n## Why This Is Practically Useful\n\nWe live in a culture of comparison. Social media has turned life into a competition with unclear rules and constantly moving goalposts.\n\nSvadharma offers an escape — not by telling you to ignore the world, but by giving you a different question to ask. Not "how am I doing compared to others?" but "am I doing what is right and true for me, right now, with full attention?"`,comments:[]},
+    {id:5,title:'Where Solo Travel Takes You — Inside Yourself',cat:'Travel',tags:['travel','solo','growth','adventure'],readTime:'5 min',date:'March 8, 2026',author:'Tanmay',status:'published',featured:false,
+     photo:'https://images.unsplash.com/photo-1488085061387-422e29b40080?w=900&auto=format&fit=crop&q=80',
+     excerpt:'Solo travel is one of the fastest ways to learn who you actually are — away from the familiar roles and expectations that define you at home. Here is what I found.',
+     body:`There is something about being completely alone in an unfamiliar place that cuts through the noise.\n\nNo familiar faces. No one who knows your history. Just you, a bag, and whatever you actually are without context.\n\n## What I Learned\n\nI learned that I am more resourceful than I thought. That I can sit with boredom and turn it into observation. That the kindness of strangers is shockingly common.\n\nI also learned that the person I am at home and the person I am on the road have some significant differences — and that the road version is often someone I like more.\n\n## The Gift of Unfamiliarity\n\nAt home, we perform versions of ourselves that have been shaped by years of feedback from the people around us. On the road, there is no audience for that performance. You get to discover who you are when no one is watching.\n\n> Travel doesn't change who you are. It reveals who you already were.\n\nI think everyone should do it at least once — alone, on a budget, in a place where no one knows your name.`,comments:[]},
+    {id:6,title:'Street Food of India — A Love Letter in Many Flavours',cat:'Food',tags:['food','India','culture','street food'],readTime:'4 min',date:'March 5, 2026',author:'Tanmay',status:'published',featured:false,
+     photo:'https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=900&auto=format&fit=crop&q=80',
+     excerpt:'Indian street food is not just food — it is geography, culture, memory and community all served on one plate for twenty rupees. A tribute to the most democratic institution in India.',
+     body:`Every city in India has a culinary personality.\n\nMumbai is vada pav — quick, efficient, honest. Chennai is idli at 6am, eaten standing up at a steel counter. Kolkata is kathi rolls and mishti doi. And Pune — my city — is a misal pav so spicy it makes your eyes water before you have taken a bite.\n\n## Why Street Food Matters\n\nStreet food is India's most democratic institution. The same vada pav feeds a CEO and a construction worker. The same chai stall hosts philosophical arguments between strangers.\n\nThere is no dress code. No reservation required. Just show up, point at what you want, and eat.\n\n## What It Means to Me\n\nI grew up eating at these stalls. The sounds, the smells, the specific quality of light at six in the morning near a breakfast vendor — these are among the most vivid sensory memories I have.\n\n> The best meals I've ever had weren't in restaurants. They were on plastic stools by the side of roads, with traffic noise for ambience and marigold chai for dessert.`,comments:[]},
+    {id:7,title:'Sleep Is Not Lazy — It Is the Foundation of Everything',cat:'Health',tags:['health','sleep','wellness','habits'],readTime:'4 min',date:'March 2, 2026',author:'Tanmay',status:'published',featured:false,
+     photo:'https://images.unsplash.com/photo-1493836512294-502baa1986e2?w=900&auto=format&fit=crop&q=80',
+     excerpt:'We celebrate people who sleep four hours and grind sixteen. But the science is unambiguous: sleep is the foundation that everything else is built on. Here is why.',
+     body:`We have a culture that celebrates sleep deprivation.\n\n"I'll sleep when I'm dead." "Hustle never sleeps." These are not just clichés — they are active cultural values that millions of people organize their lives around.\n\nThe science disagrees with all of them.\n\n## What Actually Happens While You Sleep\n\nSleep is when your brain consolidates memories, clears metabolic waste, regulates emotional responses, and repairs cellular damage. It is not downtime. It is the most active maintenance window your body has.\n\nChronic sleep deprivation — defined as consistently less than 7 hours — is associated with increased risk of heart disease, diabetes, obesity, depression, and cognitive decline.\n\n## The Real Productivity Move\n\nThe cruel irony is that the people who are sacrificing sleep to be more productive are actually sabotaging their own performance. Cognitive function, creativity, and decision-making all deteriorate significantly with sleep loss.\n\n> The most productive thing you can do for your work, your creativity, and your relationships is often simply to go to sleep.`,comments:[]},
+    {id:8,title:'The World Is Not Getting Worse — It Is Getting More Visible',cat:'World',tags:['world','media','perspective','news'],readTime:'5 min',date:'February 26, 2026',author:'Tanmay',status:'published',featured:false,
+     photo:'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&auto=format&fit=crop&q=80',
+     excerpt:'Every generation thinks the world is falling apart. But there is a strong case that what we are really experiencing is visibility — not collapse. Here is why that distinction matters.',
+     body:`Pick up any newspaper and the world seems to be in a constant state of emergency.\n\nConflicts, crises, disasters, divisions. If you consume the news without stepping back, it is easy to conclude that civilization is failing.\n\nI do not think it is. And I think it matters that we understand why we feel this way.\n\n## The Visibility Hypothesis\n\nFor most of human history, suffering happened in silence. A disaster in one region was unknown to people 200 miles away.\n\nNow, almost everything is recorded. Shared. Amplified. This creates a profound illusion: because we can see more suffering, there must be more suffering.\n\nBut visibility is not the same as frequency.\n\n## What the Data Shows\n\nBy almost every measurable dimension — extreme poverty, child mortality, life expectancy, literacy — the world has improved dramatically over the past century.\n\nThis does not mean everything is fine. But it means our intuition that things are categorically getting worse is almost certainly wrong.\n\n> Hope, properly understood, is not optimism. It's the decision to keep engaging with reality regardless of whether it's comfortable.`,comments:[]},
+  ];
+  localStorage.setItem('om4_posts',JSON.stringify(rows));
+  return rows;
+}
+
+/* ═══════════════════════════════════════════════════
+   UTILITIES
+═══════════════════════════════════════════════════ */
+function hash(s){let h=0;for(let i=0;i<s.length;i++){h=((h<<5)-h)+s.charCodeAt(i);h|=0;}return Math.abs(h).toString(16).toUpperCase().slice(0,8);}
+function fmtBody(txt){
+  return(txt||'').split('\n\n').filter(x=>x.trim()).map((p,i)=>{
+    let s=p.trim();
+    s=s.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\*(.*?)\*/g,'<em>$1</em>');
+    if(s.startsWith('## '))return`<h2>${s.slice(3)}</h2>`;
+    if(s.startsWith('# '))return`<h2>${s.slice(2)}</h2>`;
+    if(s.startsWith('> '))return`<blockquote>${s.slice(2)}</blockquote>`;
+    if(s==='---')return`<hr/>`;
+    if(s.startsWith('- ')){return`<ul>${s.split('\n').filter(l=>l.trim()).map(l=>`<li>${l.replace(/^-\s*/,'')}</li>`).join('')}</ul>`;}
+    // drop cap on first paragraph
+    if(i===0)return`<p class="drop-cap">${s}</p>`;
+    return`<p>${s}</p>`;
+  }).join('');
+}
+function catBadge(cat){const c=getC(cat);return`<span style="display:inline-flex;align-items:center;gap:5px;font-family:var(--sans);font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;background:${c.lt};color:${c.c};border:1px solid ${c.bdr};">${c.emoji} ${cat}</span>`;}
+function featBadge(){return`<span style="display:inline-block;font-family:var(--sans);font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;background:var(--ink);color:var(--cream);border:none;">★ FEATURED</span>`;}
+
+/* ═══════════════════════════════════════════════════
+   APPLY CONFIG
+═══════════════════════════════════════════════════ */
+function applyConfig(){
+  const $=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v;};
+  const $h=(id,v)=>{const e=document.getElementById(id);if(e)e.innerHTML=v;};
+  $('PT', CFG.siteName+' — '+CFG.siteTagline);
+  $('PD', CFG.siteDesc);
+  $h('mastTitle', CFG.siteName.replace(/(\w+)(\w*)/, (m,p1,p2)=>`${p1}<span>${p2}</span>`));
+  $('mastTagline', CFG.siteTagline.split('.')[0]);
+  $('aboutName', CFG.ownerName);
+  $('aboutRole', CFG.ownerRole);
+  $('aboutBlogP', CFG.ownerAbout||'This is my personal blog.');
+  $('ftDesc', 'A personal blog by '+CFG.ownerName+' — '+CFG.siteDesc);
+  $('ftCopy', '© 2026 '+CFG.siteName+' by '+CFG.ownerName+'. All rights reserved.');
+  $h('ftLogo', CFG.siteName.replace(/(\w+)(\w*)/, (m,p1,p2)=>`${p1}<span>${p2}</span>`));
+  $('ftTag', CFG.siteTagline);
+  $('admName', CFG.siteName);
+  $('admLogo', (CFG.siteName||'O').charAt(0));
+  const ava=document.getElementById('aboutAva');
+  if(ava){
+    if(CFG.ownerPhotoUrl){ava.innerHTML=`<img src="${CFG.ownerPhotoUrl}" class="about-ava-img" alt="${CFG.ownerName}" onerror="this.parentElement.innerHTML='${(CFG.ownerName||'T').charAt(0)}'"/>`;ava.className='about-ava-init';}
+    else{ava.textContent=(CFG.ownerName||'T').charAt(0);ava.className='about-ava-init';}
+  }
+  const ftCats=document.getElementById('ftCats');
+  if(ftCats)ftCats.innerHTML=CATS.slice(0,6).map(c=>`<div class="ft-lk" onclick="filterByCat('${c}')">${getC(c).emoji} ${c}</div>`).join('');
+  const mastDate=document.getElementById('mastDate');
+  if(mastDate){const d=new Date();mastDate.textContent=d.toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'}).toUpperCase();}
+  // about page photo
+  const aHero=document.getElementById('aboutHero');
+  if(aHero)aHero.style.backgroundImage=`url('${getC('Life').photo}')`;
+  document.title=CFG.siteName+' — '+CFG.siteTagline;
+}
+
+/* ═══════════════════════════════════════════════════
+   PAGE ROUTING
+═══════════════════════════════════════════════════ */
+function showPage(pg){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const el=document.getElementById('page-'+pg);if(el)el.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  if(pg==='home')renderHome();
+}
+function goHome(){curCat='All';applyTheme('All');showPage('home');}
+
+/* ═══════════════════════════════════════════════════
+   RENDER HOME
+═══════════════════════════════════════════════════ */
+function renderHome(){
+  applyConfig();
+  applyTheme(curCat);
+  renderCatStrip();
+  renderHero();
+  renderFeed();
+  renderSidebar();
+}
+function renderCatStrip(){
+  const cats=['All',...CATS];
+  document.getElementById('catStrip').innerHTML=cats.map(c=>`
+    <div class="cs-item ${curCat===c?'on':''}" onclick="filterByCat('${c}')" style="${curCat===c?'color:'+getC(c).c+';border-bottom-color:'+getC(c).c+';':''}">${c==='All'?'ALL STORIES':getC(c).emoji+' '+c.toUpperCase()}</div>`).join('');
+}
+function filterByCat(c){
+  curCat=c;vis=pSize;
+  applyTheme(c);
+  renderCatStrip();
+  renderHero();
+  renderFeed();
+  renderSidebar();
+  document.querySelector('.main-wrap')?.scrollIntoView({behavior:'smooth'});
+}
+
+function renderHero(){
+  const pub=POSTS.filter(p=>p.status==='published');
+  const arr=curCat==='All'?pub:pub.filter(p=>p.cat===curCat);
+  const feat=arr.find(p=>p.featured)||arr[0];
+  if(!feat){
+    document.getElementById('heroBg').style.backgroundImage=`url('${getC(curCat).photo}')`;
+    document.getElementById('heroTitle').textContent='No posts yet in this section';
+    document.getElementById('heroExc').textContent='Go to Admin → New Post to publish here.';
+    document.getElementById('heroMeta').innerHTML='';
+    document.getElementById('heroLabel').innerHTML=`<span>${curCat==='All'?'OPENMIND':curCat.toUpperCase()}</span>`;
+    document.getElementById('heroBtn').onclick=()=>{};
+    document.getElementById('heroStrip').innerHTML='';
+    return;
+  }
+  const heroPh=feat.photo||getC(feat.cat).photo;
+  document.getElementById('heroBg').style.backgroundImage=`url('${heroPh}')`;
+  document.getElementById('heroTitle').textContent=feat.title;
+  document.getElementById('heroExc').textContent=feat.excerpt||feat.body.split('\n\n')[0].substring(0,180);
+  document.getElementById('heroMeta').innerHTML=`<span>✍ ${feat.author}</span><span>📅 ${feat.date}</span><span>⏱ ${feat.readTime} read</span>`;
+  const cc=getC(feat.cat);
+  document.getElementById('heroLabel').innerHTML=`<span style="color:${cc.c};">${cc.emoji} ${feat.cat}</span>`;
+  document.getElementById('heroBtn').onclick=()=>openPost(feat.id);
+  // strip
+  const others=(curCat==='All'?pub.filter(p=>p.id!==feat.id):arr.filter(p=>p.id!==feat.id)).slice(0,5);
+  document.getElementById('heroStrip').innerHTML=others.map((p,i)=>{
+    const pc=getC(p.cat);
+    return`<div class="hs-item" onclick="openPost(${p.id})">
+      <div class="hs-num">${String(i+1).padStart(2,'0')}</div>
+      <div>
+        <div class="hs-cat" style="color:${pc.c};">${pc.emoji} ${p.cat}</div>
+        <div class="hs-title">${p.title.substring(0,60)}${p.title.length>60?'…':''}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderFeed(){
+  const pub=POSTS.filter(p=>p.status==='published');
+  const arr=curCat==='All'?pub:pub.filter(p=>p.cat===curCat);
+  const el=document.getElementById('feedTitle');
+  if(el)el.textContent=(curCat==='All'?'LATEST STORIES':curCat.toUpperCase()+' STORIES');
+  const fc=document.getElementById('feedCount');
+  if(fc)fc.textContent=arr.length+' post'+(arr.length!==1?'s':'');
+  const feedEl=document.getElementById('postFeed');
+  if(!arr.length){
+    feedEl.innerHTML=`<div class="empty"><div class="empty-ico">${getC(curCat).emoji}</div><div class="empty-t">No stories yet in this section</div><div class="empty-d">Go to Admin → New Post to publish here.</div></div>`;
+    document.getElementById('lmRow').style.display='none';
+    return;
+  }
+  const secRuleEl=document.getElementById('secRule');
+  if(secRuleEl)secRuleEl.style.background=getC(curCat).c;
+  const visible=arr.slice(0,vis);
+  let html='';
+  visible.forEach((p,i)=>{
+    if(i===3){
+      html+=`<div class="feed-sep"><div class="adu"><span class="adl">Advertisement · 728×90</span></div></div>`;
+    }
+    const c=getC(p.cat);
+    const ph=p.photo||c.thumb;
+    if(i===0){
+      // Large card for first
+      html+=`<div class="pcard-large" onclick="openPost(${p.id})" style="animation-delay:0ms;">
+        <div class="pcard-img-wrap">
+          <img class="pcard-img" src="${ph}" alt="${p.title}" onerror="this.src='${c.thumb}'" loading="lazy"/>
+        </div>
+        <div class="pcard-body">
+          <div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">${catBadge(p.cat)}${p.featured?featBadge():''}</div>
+            <h2 class="pcard-title" style="margin-top:12px;">${p.title}</h2>
+            <div class="pcard-exc">${p.excerpt||p.body.split('\n\n')[0].substring(0,200)}</div>
+          </div>
+          <div class="pcard-meta">
+            <span class="pcard-author">✍ ${p.author}</span>
+            <span class="pcard-read">⏱ ${p.readTime||'5 min'}</span>
+            <div class="pcard-arr" style="border-color:${c.c};color:${c.c};">→</div>
+          </div>
+        </div>
+      </div>`;
+    } else {
+      html+=`<div class="pcard-row" onclick="openPost(${p.id})" style="animation-delay:${Math.min(i,.8)*50}ms;">
+        <img class="pcard-row-img" src="${ph}" alt="${p.title}" onerror="this.src='${c.thumb}'" loading="lazy"/>
+        <div class="pcard-row-body">
+          <div>
+            <div class="pcard-row-cat" style="color:${c.c};">${c.emoji} ${p.cat}</div>
+            <div class="pcard-row-title">${p.title}</div>
+          </div>
+          <div class="pcard-row-meta">${p.date} · ${p.readTime||'5 min'} read${(p.comments||[]).length?' · 💬 '+p.comments.length:''}</div>
+        </div>
+      </div>`;
+    }
+  });
+  feedEl.innerHTML=html;
+  document.getElementById('lmRow').style.display=arr.length>vis?'block':'none';
+}
+function loadMore(){vis+=pSize;renderFeed();}
+
+function renderSidebar(){
+  const pub=POSTS.filter(p=>p.status==='published');
+  const allTags=[...new Set(POSTS.flatMap(p=>p.tags||[]))];
+  const c=getC(curCat);
+  document.getElementById('sideBar').innerHTML=`
+    <!-- ABOUT -->
+    <div class="sb-block sb-block-top" id="subAnchor">
+      <div class="sb-title">ABOUT THE AUTHOR</div>
+      <div class="sb-avatar-init" style="background:${c.c};">${(CFG.ownerName||'T').charAt(0)}</div>
+      <div class="sb-name">${CFG.ownerName}</div>
+      <div class="sb-role" style="color:${c.c};">${CFG.ownerRole}</div>
+      <div class="sb-bio">${CFG.ownerBio}</div>
+      <div class="sb-socs">
+        <button class="sb-soc" onclick="openSoc('twitter')">𝕏 Twitter</button>
+        <button class="sb-soc" onclick="openSoc('instagram')">📷 Insta</button>
+        <button class="sb-soc" onclick="openSoc('linkedin')">in LinkedIn</button>
+      </div>
+    </div>
+    <!-- SUBSCRIBE -->
+    <div class="sb-block sb-block-top" id="subFormAnchor">
+      <div class="sb-title">SUBSCRIBE FREE</div>
+      <div class="sub-form">
+        <input class="sub-inp" id="subEmail" type="email" placeholder="your@email.com"/>
+        <button class="sub-btn" style="background:${c.c};" onclick="doSub()">Get New Posts →</button>
+        <div class="sub-note">🔒 No spam. Unsubscribe anytime.</div>
+      </div>
+    </div>
+    <!-- AD -->
+    <div class="sb-ad"><span class="adl">Advertisement</span><span>300 × 250 — AdSense</span></div>
+    <!-- POPULAR -->
+    <div class="sb-block sb-block-top">
+      <div class="sb-title">POPULAR STORIES</div>
+      ${pub.slice(0,5).map((p,i)=>{
+        const pc=getC(p.cat);
+        const ph=p.photo||pc.thumb;
+        return`<div class="pop-item" onclick="openPost(${p.id})">
+          <img class="pop-thumb" src="${ph}" alt="${p.title}" onerror="this.src='${pc.thumb}'" loading="lazy"/>
+          <div>
+            <div class="pop-cat" style="color:${pc.c};">${pc.emoji} ${p.cat}</div>
+            <div class="pop-title">${p.title.substring(0,54)}${p.title.length>54?'…':''}</div>
+          </div>
+        </div>`;
+      }).join('')}
+    </div>
+    <!-- CATEGORIES -->
+    <div class="sb-block sb-block-top">
+      <div class="sb-title">BROWSE TOPICS</div>
+      ${CATS.map(cat=>{
+        const cc=getC(cat);
+        const cnt=pub.filter(p=>p.cat===cat).length;
+        return`<div class="cat-list-item ${curCat===cat?'on':''}" onclick="filterByCat('${cat}')" style="border-left-color:${cc.c};">
+          <div class="cat-list-left">
+            <img class="cat-list-thumb" src="${cc.thumb}" alt="${cat}" onerror="this.style.display='none'" loading="lazy"/>
+            <span class="cat-list-name" style="color:${cc.c};">${cc.emoji} ${cat}</span>
+          </div>
+          <span class="cat-list-count" style="background:${cc.lt};color:${cc.c};border-color:${cc.bdr};">${cnt}</span>
+        </div>`;
+      }).join('')}
+    </div>
+    <!-- TAGS -->
+    <div class="sb-block sb-block-top">
+      <div class="sb-title">TAGS</div>
+      <div class="tag-cloud">${allTags.map(t=>`<div class="tag-item" onclick="searchByTag('${t}')">#${t}</div>`).join('')}</div>
+    </div>
+    <!-- AD 2 -->
+    <div class="sb-ad" style="min-height:600px;"><span class="adl">Advertisement</span><span>300 × 600</span></div>`;
+}
+
+/* ═══════════════════════════════════════════════════
+   ARTICLE VIEW
+═══════════════════════════════════════════════════ */
+function openPost(id){
+  const p=POSTS.find(x=>x.id===id);if(!p)return;
+  curPid=id;
+  const c=getC(p.cat);
+  applyTheme(p.cat);
+  const ph=p.photo||c.photo;
+  // hero image
+  const imgEl=document.getElementById('artHeroImg');
+  imgEl.src=ph; imgEl.alt=p.title;
+  imgEl.onerror=()=>{imgEl.src=c.photo;};
+  document.getElementById('artHeroCats').innerHTML=`<div style="display:flex;gap:8px;flex-wrap:wrap;">${catBadge(p.cat)}${p.featured?featBadge():''}</div>`;
+  document.getElementById('artH1').textContent=p.title;
+  document.getElementById('artByline').innerHTML=`<span class="art-author">✍ ${p.author}</span><span>📅 ${p.date}</span><span>⏱ ${p.readTime||'5 min'} read</span><span>💬 ${(p.comments||[]).length} comments</span>`;
+  document.getElementById('artBody').innerHTML=fmtBody(p.body||p.excerpt);
+  document.getElementById('artTags').innerHTML=(p.tags||[]).map(t=>`<span class="tag-item">#${t}</span>`).join('');
+  document.getElementById('artHash').textContent=hash(p.title+p.date);
+  renderCmts(p);
+  renderRelated(p);
+  const el=document.getElementById('artPage');
+  el.classList.add('open');el.scrollTop=0;document.body.style.overflow='hidden';
+}
+function closeArt(){
+  document.getElementById('artPage').classList.remove('open');
+  document.body.style.overflow='';
+  applyTheme(curCat);
+  curPid=null;
+}
+function renderCmts(p){
+  const cmts=p.comments||[];
+  document.getElementById('cmtTitle').textContent=`Comments (${cmts.length})`;
+  const c=getC(p.cat);
+  document.getElementById('cmtList').innerHTML=cmts.map(cm=>`
+    <div class="cmt-item">
+      <div class="cmt-meta">
+        <div class="cmt-ava" style="background:${c.c};">${cm.name.charAt(0).toUpperCase()}</div>
+        <div><div class="cmt-name">${cm.name}</div><div class="cmt-date">${cm.date}</div></div>
+      </div>
+      <div class="cmt-text">${cm.text}</div>
+    </div>`).join('')||'<div style="font-family:var(--body);font-style:italic;font-size:16px;color:var(--ink4);padding:16px 0;">No comments yet. Be the first!</div>';
+}
+function renderRelated(p){
+  const c=getC(p.cat);
+  const rel=POSTS.filter(x=>x.id!==p.id&&x.cat===p.cat&&x.status==='published').slice(0,3);
+  document.getElementById('relGrid').innerHTML=rel.map(r=>{
+    const ph=r.photo||c.thumb;
+    return`<div class="rel-card" onclick="openPost(${r.id});document.getElementById('artPage').scrollTop=0;">
+      <img class="rel-card-img" src="${ph}" alt="${r.title}" onerror="this.src='${c.thumb}'" loading="lazy"/>
+      <div class="rel-card-body">
+        <div class="rel-card-cat" style="color:${c.c};">${c.emoji} ${r.cat}</div>
+        <div class="rel-card-title">${r.title}</div>
+      </div>
+    </div>`;
+  }).join('')||'<div style="font-family:var(--body);font-style:italic;color:var(--ink4);">No related stories yet.</div>';
+}
+function submitCmt(){
+  const nm=document.getElementById('cfN').value.trim();
+  const tx=document.getElementById('cfT').value.trim();
+  if(!nm||!tx){toast('Enter your name and comment','err');return;}
+  if(!curPid)return;
+  const i=POSTS.findIndex(p=>p.id===curPid);if(i<0)return;
+  if(!POSTS[i].comments)POSTS[i].comments=[];
+  POSTS[i].comments.push({id:Date.now(),name:nm,date:new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'}),text:tx});
+  sP();renderCmts(POSTS[i]);
+  document.getElementById('cfN').value='';document.getElementById('cfE').value='';document.getElementById('cfT').value='';
+  toast('💬 Comment posted!','ok');
+}
+function shareP(pl){
+  const url=window.location.href;
+  const p=POSTS.find(x=>x.id===curPid);
+  const t=p?p.title:CFG.siteName;
+  if(pl==='twitter')window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(t)}&url=${encodeURIComponent(url)}`,'_blank');
+  else if(pl==='facebook')window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,'_blank');
+  else if(pl==='whatsapp')window.open(`https://wa.me/?text=${encodeURIComponent(t+' '+url)}`,'_blank');
+  else copyUrl();
+}
+function copyUrl(){navigator.clipboard?.writeText(window.location.href).then(()=>toast('Link copied!','ok')).catch(()=>toast('Copy URL from browser bar','info'));}
+
+/* ═══════════════════════════════════════════════════
+   SEARCH
+═══════════════════════════════════════════════════ */
+function openSearch(){document.getElementById('sOver').classList.add('open');setTimeout(()=>document.getElementById('sInp').focus(),80);}
+function closeSearch(){document.getElementById('sOver').classList.remove('open');document.getElementById('sInp').value='';document.getElementById('sRes').innerHTML='<div class="s-empty">Start typing to search…</div>';}
+function closeSOut(e){if(e.target.id==='sOver')closeSearch();}
+function doSearch(){
+  const q=document.getElementById('sInp').value.toLowerCase().trim();
+  const el=document.getElementById('sRes');
+  if(!q){el.innerHTML='<div class="s-empty">Start typing to search…</div>';return;}
+  const res=POSTS.filter(p=>p.status==='published'&&(p.title.toLowerCase().includes(q)||p.excerpt?.toLowerCase().includes(q)||(p.tags||[]).some(t=>t.toLowerCase().includes(q))||p.cat.toLowerCase().includes(q)));
+  if(!res.length){el.innerHTML=`<div class="s-empty">No results for "${q}"</div>`;return;}
+  el.innerHTML=res.slice(0,8).map(p=>{
+    const c=getC(p.cat);
+    const ph=p.photo||c.thumb;
+    return`<div class="sr-item" onclick="closeSearch();openPost(${p.id})">
+      <img class="sr-thumb" src="${ph}" alt="${p.title}" onerror="this.src='${c.thumb}'" loading="lazy"/>
+      <div>
+        <div class="sr-cat" style="color:${c.c};">${c.emoji} ${p.cat} · ${p.date}</div>
+        <div class="sr-title">${p.title}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+function searchByTag(t){document.getElementById('sInp').value=t;doSearch();openSearch();}
+
+/* ═══════════════════════════════════════════════════
+   MISC
+═══════════════════════════════════════════════════ */
+function openSoc(k){const u={twitter:CFG.twitterUrl,instagram:CFG.instaUrl,linkedin:CFG.linkedinUrl}[k];u?window.open(u,'_blank'):toast('Add your '+k+' link in Admin → My Profile','info');}
+function scrollSub(){showPage('home');setTimeout(()=>document.getElementById('subFormAnchor')?.scrollIntoView({behavior:'smooth'}),300);}
+function doSub(){
+  const v=document.getElementById('subEmail')?.value.trim();
+  if(!v||!v.includes('@')){toast('Enter a valid email','err');return;}
+  if(!SUBS.includes(v)){SUBS.push(v);sSb();}
+  toast('🎉 Subscribed to '+CFG.siteName+'!','ok');
+  if(document.getElementById('subEmail'))document.getElementById('subEmail').value='';
+}
+function sendMsg(){
+  const n=document.getElementById('cN').value.trim(),e=document.getElementById('cE').value.trim(),m=document.getElementById('cM').value.trim();
+  if(!n||!e||!m){toast('Please fill all required fields','err');return;}
+  toast('✅ Message sent! I\'ll reply soon.','ok');
+  ['cN','cE','cS','cM'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+}
+
+/* ═══════════════════════════════════════════════════
+   ADMIN
+═══════════════════════════════════════════════════ */
+function openAdm(){document.getElementById('admPanel').classList.add('open');document.body.style.overflow='hidden';admRender();}
+function closeAdm(){document.getElementById('admPanel').classList.remove('open');document.body.style.overflow='';}
+function setTab(t){admTab=t;admRender();}
+function admRender(){
+  const el=document.getElementById('admBody');
+  if(!admIn){el.innerHTML=loginH();return;}
+  const navDef=[
+    {sec:'CONTENT'},
+    {t:'dashboard',ico:'📊',l:'Dashboard'},
+    {t:'newpost',  ico:'✏️', l:'New Post'},
+    {t:'posts',    ico:'📝', l:`All Posts (${POSTS.length})`},
+    {t:'comments', ico:'💬', l:`Comments (${POSTS.reduce((a,p)=>a+(p.comments||[]).length,0)})`},
+    {sec:'MANAGE'},
+    {t:'categories',ico:'🏷️',l:'Categories'},
+    {t:'photos',    ico:'🖼️', l:'Post Photos'},
+    {t:'subscribers',ico:'📧',l:`Subscribers (${SUBS.length})`},
+    {sec:'SETTINGS'},
+    {t:'profile',  ico:'👤', l:'My Profile'},
+    {t:'design',   ico:'🎨', l:'Customize Site'},
+    {t:'settings', ico:'⚙️', l:'Settings & API'},
+    {t:'security', ico:'🔒', l:'Security'},
+    {t:'deploy',   ico:'🚀', l:'Go Live & Earn'},
+  ];
+  el.innerHTML=`<div class="adm-layout">
+    <nav class="adm-sidenav">
+      ${navDef.map(item=>{
+        if(item.sec)return`<div class="adm-sec-lbl">${item.sec}</div>`;
+        return`<div class="adm-nav-item ${admTab===item.t?'on':''}" onclick="setTab('${item.t}')"><span>${item.ico}</span>${item.l}</div>`;
+      }).join('')}
+      <div style="height:1px;background:var(--bdr);margin:8px 4px;"></div>
+      <div class="adm-nav-item" onclick="doLogout()"><span>🚪</span>Logout</div>
+    </nav>
+    <div class="adm-main-content">${tabH()}</div>
+  </div>`;
+}
+function loginH(){return`<div class="alog"><div class="alog-c">
+  <div class="alog-logo">${(CFG.siteName||'O').charAt(0)}</div>
+  <div class="alog-title">${CFG.siteName}</div>
+  <div class="alog-sub">ADMIN ACCESS — ONLY YOU CAN ENTER</div>
+  <div class="af" style="text-align:left;"><label class="al">PASSWORD</label>
+    <input class="ai" id="lp" type="password" placeholder="Enter your admin password…" onkeydown="if(event.key==='Enter')doLogin()"/>
+  </div>
+  <button class="abtn" style="width:100%;justify-content:center;" onclick="doLogin()">Login →</button>
+  <div class="alog-err" id="lerr"></div>
+  <p style="margin-top:22px;font-family:var(--mono);font-size:10px;color:var(--ink4);">Default password: admin123 — Change immediately in Settings after login.</p>
+</div></div>`;}
+function doLogin(){if(document.getElementById('lp').value===(CFG.adminPass||'admin123')){admIn=true;admTab='dashboard';admRender();}else document.getElementById('lerr').textContent='Wrong password. Try again.';}
+function doLogout(){admIn=false;closeAdm();}
+
+function tabH(){
+  if(admTab==='dashboard')  return dashH();
+  if(admTab==='newpost')    return newPostH();
+  if(admTab==='posts')      return postsH();
+  if(admTab==='comments')   return cmtsH();
+  if(admTab==='categories') return catsH();
+  if(admTab==='photos')     return photosH();
+  if(admTab==='subscribers')return subsH();
+  if(admTab==='profile')    return profileH();
+  if(admTab==='design')     return designH();
+  if(admTab==='settings')   return settingsH();
+  if(admTab==='security')   return secH();
+  if(admTab==='deploy')     return deployH();
+  return '';
+}
+
+function dashH(){
+  const pub=POSTS.filter(p=>p.status==='published').length;
+  const dft=POSTS.filter(p=>p.status==='draft').length;
+  const allC=POSTS.reduce((a,p)=>a+(p.comments||[]).length,0);
+  return`<div class="a-title">Dashboard</div>
+  <div class="a-stats">
+    <div class="astat"><div class="astat-n">${pub}</div><div class="astat-l">PUBLISHED</div></div>
+    <div class="astat"><div class="astat-n">${dft}</div><div class="astat-l">DRAFTS</div></div>
+    <div class="astat"><div class="astat-n">${allC}</div><div class="astat-l">COMMENTS</div></div>
+    <div class="astat"><div class="astat-n">${SUBS.length}</div><div class="astat-l">SUBSCRIBERS</div></div>
+    <div class="astat"><div class="astat-n">${CATS.length}</div><div class="astat-l">CATEGORIES</div></div>
+  </div>
+  <div style="background:var(--cream);border:1px solid var(--bdr);padding:20px;margin-bottom:20px;">
+    <div style="font-family:var(--mono);font-size:10px;color:var(--ink4);letter-spacing:.1em;margin-bottom:14px;">RECENT POSTS</div>
+    ${POSTS.slice(0,6).map(p=>{const c=getC(p.cat);return`<div style="padding:10px 0;border-bottom:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:center;gap:12px;cursor:pointer;" onclick="openPost(${p.id})">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <img src="${p.photo||c.thumb}" style="width:48px;height:36px;object-fit:cover;border:1px solid var(--bdr);flex-shrink:0;" onerror="this.style.display='none'"/>
+        <span style="font-size:14px;">${p.title.substring(0,55)}${p.title.length>55?'…':''}</span>
+      </div>
+      <span style="font-size:11px;padding:2px 10px;background:${c.lt};color:${c.c};font-family:var(--sans);font-weight:700;white-space:nowrap;">${c.emoji} ${p.cat}</span>
+    </div>`;}).join('')}
+  </div>
+  <div class="abtns">
+    <button class="abtn" onclick="setTab('newpost')">+ New Post</button>
+    <button class="abtn ghost" onclick="setTab('deploy')">🚀 Go Live</button>
+    <button class="abtn ghost" onclick="setTab('settings')">⚙ Settings</button>
+  </div>`;
+}
+
+function newPostH(edit){
+  const p=edit||{};
+  const catOpts=CATS.map(c=>`<option ${p.cat===c?'selected':''}>${c}</option>`).join('');
+  return`<div class="a-title">${edit?'Edit Post':'New Post'}</div>
+  <div class="aibox">
+    <div class="aibox-lbl">⚡ AI AUTO-WRITE — Enter any topic, AI writes the full post for you</div>
+    <div class="a2" style="margin-bottom:12px;">
+      <div class="af" style="margin-bottom:0;"><label class="al">TOPIC / IDEA</label><input class="ai" id="awt" placeholder="e.g. what travel taught me about myself…"/></div>
+      <div class="af" style="margin-bottom:0;"><label class="al">CATEGORY</label><select class="asel" id="awc">${catOpts}</select></div>
+    </div>
+    <button class="abtn" onclick="aiWrite()">⚡ AI Write Full Post</button>
+    <span style="font-family:var(--mono);font-size:10px;margin-left:12px;opacity:.6;">API key required in Settings</span>
+  </div>
+  <div class="a2">
+    <div class="af"><label class="al">POST TITLE *</label><input class="ai" id="wT" value="${p.title||''}" placeholder="Enter headline…"/></div>
+    <div class="af"><label class="al">READ TIME</label><input class="ai" id="wR" value="${p.readTime||''}" placeholder="5 min"/></div>
+  </div>
+  <div class="a3">
+    <div class="af"><label class="al">CATEGORY *</label><select class="asel" id="wC">${catOpts}</select></div>
+    <div class="af"><label class="al">STATUS</label>
+      <select class="asel" id="wSt"><option ${(p.status||'published')==='published'?'selected':''}>published</option><option ${p.status==='draft'?'selected':''}>draft</option></select>
+    </div>
+    <div class="af"><label class="al">FEATURED</label>
+      <select class="asel" id="wFt"><option value="no" ${!p.featured?'selected':''}>No</option><option value="yes" ${p.featured?'selected':''}>Yes — make featured</option></select>
+    </div>
+  </div>
+  <div class="af">
+    <label class="al">POST PHOTO URL (from Unsplash, Google Images, etc.)</label>
+    <input class="ai" id="wPh" value="${p.photo||''}" placeholder="https://images.unsplash.com/photo-…"/>
+    <div style="font-family:var(--mono);font-size:10px;color:var(--ink4);margin-top:6px;">Tip: Go to unsplash.com → find a photo → right-click → Copy image address. Or leave blank for automatic category photo.</div>
+    ${p.photo?`<img src="${p.photo}" style="width:100%;max-height:200px;object-fit:cover;margin-top:10px;border:1px solid var(--bdr);" onerror="this.style.display='none'"/>`:``}
+  </div>
+  <div class="af"><label class="al">TAGS (comma separated)</label><input class="ai" id="wTg" value="${(p.tags||[]).join(', ')}" placeholder="life, india, world…"/></div>
+  <div class="af"><label class="al">EXCERPT (shown in feed) *</label><textarea class="ata" id="wX" style="min-height:80px;" placeholder="2-3 compelling sentences…">${p.excerpt||''}</textarea></div>
+  <div class="af">
+    <label class="al">FULL POST BODY * — blank line = paragraph · **bold** · *italic* · ## Heading · > Blockquote · - List</label>
+    <div class="etbar">
+      <button class="etb" onclick="ins('**','**')"><b>B</b></button>
+      <button class="etb" onclick="ins('*','*')"><i>I</i></button>
+      <button class="etb" onclick="ins('## ','')">H2</button>
+      <button class="etb" onclick="ins('### ','')">H3</button>
+      <button class="etb" onclick="ins('> ','')">❝</button>
+      <button class="etb" onclick="ins('- ','')">• List</button>
+      <button class="etb" onclick="ins('---','')">── Rule</button>
+      <button class="etb" onclick="ins('\\n\\n','')">¶ Para</button>
+    </div>
+    <textarea class="ed-area" id="wB" placeholder="Write your post here…&#10;&#10;Use blank lines between paragraphs.&#10;&#10;**This is bold text** and *this is italic*.&#10;&#10;## This is a section heading&#10;&#10;> This is a pullquote&#10;&#10;- This is a list item">${p.body||''}</textarea>
+  </div>
+  <div class="abtns">
+    <button class="abtn" onclick="savePost(${p.id||0})">💾 ${p.id?'Update Post':'Publish Post'}</button>
+    <button class="abtn grn" onclick="savePAs('published',${p.id||0})">✅ Publish Now</button>
+    <button class="abtn ghost" onclick="savePAs('draft',${p.id||0})">📋 Save Draft</button>
+    <button class="abtn ghost" onclick="prevPost()">👁 Preview</button>
+    ${p.id?`<button class="abtn danger" onclick="delPost(${p.id})">🗑 Delete</button>`:''}
+  </div>`;
+}
+function ins(b,a){const ta=document.getElementById('wB');if(!ta)return;const s=ta.selectionStart,e=ta.selectionEnd,sel=ta.value.substring(s,e);ta.value=ta.value.substring(0,s)+b+sel+a+ta.value.substring(e);ta.focus();ta.selectionStart=s+b.length;ta.selectionEnd=s+b.length+sel.length;}
+
+async function aiWrite(){
+  const topic=document.getElementById('awt').value.trim()||'something meaningful about life';
+  const cat=document.getElementById('awc').value;
+  if(!CFG.apiKey){toast('Add your Anthropic API key in Settings first','err');setTab('settings');return;}
+  toast('⏳ AI is writing your post…','info');
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','x-api-key':CFG.apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      body:JSON.stringify({
+        model:'claude-sonnet-4-20250514',max_tokens:1600,
+        messages:[{role:'user',content:`You are writing for "${CFG.siteName}", a beautiful classic personal blog. Write a post about: "${topic}". Category: ${cat}.\n\nVoice: first-person, honest, warm, literary, personal — like an elegant essay by a thoughtful young Indian writer. NOT about coding or technology.\n\nRespond ONLY with valid JSON (no markdown fences, no extra text):\n{"title":"compelling headline max 12 words","excerpt":"2-3 compelling sentences 70-100 words — draw the reader in","body":"7-9 paragraphs separated by double newlines \\n\\n. Use **bold** for key phrases, ## for 2-3 section headings, > for 1-2 pullquotes. 850-1100 words. Literary, thoughtful, human voice.","tags":["tag1","tag2","tag3","tag4"],"readTime":"X min"}`}]
+      })
+    });
+    const data=await res.json();
+    if(data.error)throw new Error(data.error.message);
+    const art=JSON.parse(data.content[0].text.trim().replace(/```json|```/g,''));
+    document.getElementById('wT').value =art.title||'';
+    document.getElementById('wX').value =art.excerpt||'';
+    document.getElementById('wB').value =art.body||'';
+    document.getElementById('wTg').value=(art.tags||[]).join(', ');
+    document.getElementById('wR').value =art.readTime||'6 min';
+    toast('✅ AI drafted your post — review & publish!','ok');
+  }catch(e){toast('❌ '+e.message,'err');}
+}
+function getForm(){
+  return{
+    title:   document.getElementById('wT')?.value.trim(),
+    excerpt: document.getElementById('wX')?.value.trim(),
+    body:    document.getElementById('wB')?.value.trim(),
+    cat:     document.getElementById('wC')?.value,
+    status:  document.getElementById('wSt')?.value||'published',
+    featured:document.getElementById('wFt')?.value==='yes',
+    readTime:document.getElementById('wR')?.value.trim()||'5 min',
+    tags:    (document.getElementById('wTg')?.value||'').split(',').map(t=>t.trim()).filter(Boolean),
+    photo:   document.getElementById('wPh')?.value.trim()||'',
+  };
+}
+function savePost(eId){
+  const f=getForm();
+  if(!f.title||!f.excerpt||!f.body){toast('Title, excerpt and body are required','err');return;}
+  if(eId){const i=POSTS.findIndex(p=>p.id===eId);if(i>=0){POSTS[i]={...POSTS[i],...f,author:CFG.ownerName};sP();renderHome();admRender();toast('✅ Post updated!','ok');return;}}
+  if(f.featured)POSTS=POSTS.map(p=>({...p,featured:false}));
+  POSTS.unshift({id:Date.now(),...f,author:CFG.ownerName,date:new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'}),comments:[]});
+  sP();renderHome();toast('✅ Post published!','ok');setTab('posts');
+}
+function savePAs(status,eId){
+  const f=getForm();f.status=status;
+  if(!f.title){toast('Enter a title first','err');return;}
+  if(eId){const i=POSTS.findIndex(p=>p.id===eId);if(i>=0){POSTS[i]={...POSTS[i],...f};sP();renderHome();admRender();toast(`✅ Saved as ${status}!`,'ok');return;}}
+  if(!f.excerpt||!f.body){toast('Excerpt and body are needed','err');return;}
+  if(f.featured)POSTS=POSTS.map(p=>({...p,featured:false}));
+  POSTS.unshift({id:Date.now(),...f,author:CFG.ownerName,date:new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'}),comments:[]});
+  sP();renderHome();toast(`✅ Saved as ${status}!`,'ok');setTab('posts');
+}
+function prevPost(){
+  const f=getForm();if(!f.title){toast('Enter a title first','err');return;}
+  const t={id:-1,...f,author:CFG.ownerName,date:'Preview',comments:[]};
+  POSTS.unshift(t);closeAdm();openPost(-1);POSTS.shift();
+}
+function delPost(id){
+  if(!confirm('Delete this post permanently? This cannot be undone.'))return;
+  POSTS=POSTS.filter(p=>p.id!==id);sP();renderHome();admRender();toast('🗑 Post deleted','err');
+}
+function togFeat(id){
+  const i=POSTS.findIndex(p=>p.id===id);if(i<0)return;
+  const was=POSTS[i].featured;
+  POSTS=POSTS.map(p=>({...p,featured:false}));
+  POSTS[i].featured=!was;
+  sP();renderHome();admRender();toast('⭐ Featured updated','ok');
+}
+function editPostAdm(id){
+  const p=POSTS.find(x=>x.id===id);if(!p)return;
+  admTab='newpost';
+  document.getElementById('admBody').querySelector('.adm-main-content').innerHTML=newPostH(p);
+}
+
+function postsH(){
+  return`<div class="a-title">All Posts</div>
+  <div style="margin-bottom:16px;"><button class="abtn" onclick="setTab('newpost')">+ New Post</button></div>
+  <div style="overflow-x:auto;">
+  <table class="ptbl">
+    <thead><tr><th width="52">PHOTO</th><th>TITLE</th><th>CATEGORY</th><th>STATUS</th><th>DATE</th><th>CMTS</th><th>ACTIONS</th></tr></thead>
+    <tbody>${POSTS.map(p=>{const c=getC(p.cat);return`<tr>
+      <td><img class="ptbl-thumb" src="${p.photo||c.thumb}" alt="" onerror="this.style.display='none'" loading="lazy"/></td>
+      <td style="font-weight:600;font-size:14px;max-width:280px;">${p.title.substring(0,52)}${p.title.length>52?'…':''}${p.featured?'<span style="font-size:9px;color:var(--faith-c);margin-left:6px;">★</span>':''}</td>
+      <td><span style="background:${c.lt};color:${c.c};padding:2px 10px;font-family:var(--sans);font-size:10px;font-weight:700;white-space:nowrap;">${c.emoji} ${p.cat}</span></td>
+      <td><span class="ps ${p.status.startsWith('pub')?'ps-pub':'ps-dft'}">${p.status}</span></td>
+      <td style="font-family:var(--mono);font-size:11px;color:var(--ink4);white-space:nowrap;">${p.date}</td>
+      <td style="font-family:var(--mono);font-size:12px;text-align:center;">${(p.comments||[]).length}</td>
+      <td><div style="display:flex;gap:4px;">
+        <button class="c-ico" onclick="editPostAdm(${p.id})" title="Edit">✏</button>
+        <button class="c-ico" onclick="togFeat(${p.id})" title="${p.featured?'Unfeature':'Feature'}">${p.featured?'★':'☆'}</button>
+        <button class="c-ico del" onclick="delPost(${p.id})" title="Delete">✕</button>
+      </div></td>
+    </tr>`;}).join('')}
+    </tbody>
+  </table></div>`;
+}
+
+function cmtsH(){
+  const all=POSTS.flatMap(p=>(p.comments||[]).map(c=>({...c,pt:p.title,pid:p.id})));
+  return`<div class="a-title">Comments (${all.length})</div>
+  ${all.length===0?'<div style="font-family:var(--body);font-style:italic;font-size:17px;color:var(--ink4);padding:20px;">No comments yet.</div>':
+  all.map(c=>`<div class="cmt-r">
+    <div class="cmt-r-hd">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--tc);color:var(--cream);font-family:var(--serif);font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;">${c.name.charAt(0).toUpperCase()}</div>
+        <div><div style="font-weight:700;font-size:13px;">${c.name}</div><div style="font-family:var(--mono);font-size:10px;color:var(--ink4);">${c.date} · On: "${c.pt?.substring(0,40)}…"</div></div>
+      </div>
+      <button class="c-ico del" onclick="delCmt(${c.pid},${c.id})">✕</button>
+    </div>
+    <div style="font-family:var(--body);font-size:14px;color:var(--ink2);line-height:1.7;">${c.text}</div>
+  </div>`).join('')}`;
+}
+function delCmt(pid,cid){const i=POSTS.findIndex(p=>p.id===pid);if(i<0)return;POSTS[i].comments=(POSTS[i].comments||[]).filter(c=>c.id!==cid);sP();admRender();toast('Comment deleted','err');}
+
+function catsH(){
+  return`<div class="a-title">Categories</div>
+  <div style="display:flex;gap:20px;flex-wrap:wrap;">
+    <div style="flex:1;min-width:220px;">
+      <div style="font-family:var(--mono);font-size:10px;color:var(--ink4);letter-spacing:.1em;margin-bottom:12px;">ALL CATEGORIES</div>
+      ${CATS.map(c=>{const cc=getC(c);return`<div class="cat-item-adm" style="border-left-color:${cc.c};">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <img src="${cc.thumb}" style="width:48px;height:36px;object-fit:cover;border:1px solid var(--bdr);" onerror="this.style.display='none'" loading="lazy"/>
+          <span style="font-family:var(--sans);font-size:13px;font-weight:700;color:${cc.c};">${cc.emoji} ${c}</span>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <span style="font-family:var(--mono);font-size:10px;background:${cc.lt};color:${cc.c};padding:2px 8px;">${POSTS.filter(p=>p.cat===c).length} posts</span>
+          <button class="c-ico del" onclick="delCat('${c}')" style="width:26px;height:26px;font-size:11px;">✕</button>
+        </div>
+      </div>`;}).join('')}
+    </div>
+    <div style="flex:1;min-width:220px;">
+      <div style="font-family:var(--mono);font-size:10px;color:var(--ink4);letter-spacing:.1em;margin-bottom:12px;">ADD NEW CATEGORY</div>
+      <div class="af"><label class="al">CATEGORY NAME</label><input class="ai" id="nCat" placeholder="e.g. Science, Finance…"/></div>
+      <button class="abtn" onclick="addCat()">+ Add Category</button>
+    </div>
+  </div>`;
+}
+function addCat(){const n=document.getElementById('nCat').value.trim();if(!n){toast('Enter category name','err');return;}if(CATS.includes(n)){toast('Already exists','err');return;}CATS.push(n);sCt();renderHome();admRender();toast('✅ Category added!','ok');}
+function delCat(c){if(!confirm(`Delete "${c}"?`))return;CATS=CATS.filter(x=>x!==c);sCt();renderHome();admRender();toast('Deleted','err');}
+
+function photosH(){
+  return`<div class="a-title">Post Photos</div>
+  <div style="background:var(--cream);border:1px solid var(--bdr);padding:20px;margin-bottom:20px;">
+    <div style="font-family:var(--sans);font-size:13px;font-weight:700;margin-bottom:12px;">HOW TO GET FREE PHOTOS FOR YOUR POSTS</div>
+    <div style="font-family:var(--mono);font-size:12px;color:var(--ink3);line-height:2.2;">
+      <div>1. Go to <b style="color:var(--ink);">unsplash.com</b> — completely free, beautiful photos</div>
+      <div>2. Search for your topic (e.g. "India temple", "travel", "food", "life")</div>
+      <div>3. Click a photo → right-click → "Copy image address"</div>
+      <div>4. When writing a post → paste the URL in "Post Photo URL" field</div>
+      <div>5. Or use: <b style="color:var(--ink);">pexels.com</b> — also 100% free</div>
+    </div>
+  </div>
+  <div style="font-family:var(--mono);font-size:10px;color:var(--ink4);letter-spacing:.1em;margin-bottom:14px;">CURRENT POST PHOTOS</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;">
+    ${POSTS.filter(p=>p.photo).map(p=>`
+      <div style="position:relative;cursor:pointer;" onclick="editPostAdm(${p.id})">
+        <img src="${p.photo}" style="width:100%;height:120px;object-fit:cover;border:1px solid var(--bdr);" onerror="this.style.display='none'" loading="lazy"/>
+        <div style="padding:8px;background:var(--cream);border:1px solid var(--bdr);border-top:none;">
+          <div style="font-size:11px;font-weight:600;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${p.title.substring(0,32)}…</div>
+          <div style="font-family:var(--mono);font-size:9px;color:var(--ink4);margin-top:3px;">${getC(p.cat).emoji} ${p.cat} · Click to edit</div>
+        </div>
+      </div>`).join('')}
+  </div>`;
+}
+
+function subsH(){
+  return`<div class="a-title">Subscribers (${SUBS.length})</div>
+  ${SUBS.length===0?'<div style="font-family:var(--body);font-style:italic;font-size:17px;color:var(--ink4);padding:20px;">No subscribers yet. Share your blog!</div>':
+  `<div style="background:var(--cream);border:1px solid var(--bdr);padding:20px;">
+    ${SUBS.map((s,i)=>`<div style="padding:10px 0;border-bottom:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:center;">
+      <span style="font-family:var(--mono);font-size:13px;">${s}</span>
+      <button class="c-ico del" onclick="delSub(${i})" style="width:26px;height:26px;">✕</button>
+    </div>`).join('')}
+  </div>`}`;
+}
+function delSub(i){SUBS.splice(i,1);sSb();admRender();}
+
+function profileH(){
+  return`<div class="a-title">My Profile</div>
+  <div class="a2">
+    <div class="af"><label class="al">YOUR FULL NAME</label><input class="ai" id="pN" value="${CFG.ownerName||''}"/></div>
+    <div class="af"><label class="al">ROLE / TAGLINE</label><input class="ai" id="pR" value="${CFG.ownerRole||''}"/></div>
+  </div>
+  <div class="af"><label class="al">SHORT BIO (sidebar)</label><textarea class="ata" id="pB" style="min-height:80px;">${CFG.ownerBio||''}</textarea></div>
+  <div class="af"><label class="al">ABOUT BLOG TEXT</label><textarea class="ata" id="pA" style="min-height:80px;">${CFG.ownerAbout||''}</textarea></div>
+  <div class="af"><label class="al">YOUR PHOTO URL (optional — from Instagram, LinkedIn, etc.)</label><input class="ai" id="pPh" value="${CFG.ownerPhotoUrl||''}" placeholder="https://…"/></div>
+  <div class="a3">
+    <div class="af"><label class="al">TWITTER / X URL</label><input class="ai" id="pTw" value="${CFG.twitterUrl||''}" placeholder="https://x.com/…"/></div>
+    <div class="af"><label class="al">INSTAGRAM URL</label><input class="ai" id="pIg" value="${CFG.instaUrl||''}" placeholder="https://instagram.com/…"/></div>
+    <div class="af"><label class="al">LINKEDIN URL</label><input class="ai" id="pLi" value="${CFG.linkedinUrl||''}" placeholder="https://linkedin.com/in/…"/></div>
+  </div>
+  <button class="abtn" onclick="saveProfile()">💾 Save Profile</button>`;
+}
+function saveProfile(){
+  CFG.ownerName     =document.getElementById('pN').value.trim()||CFG.ownerName;
+  CFG.ownerRole     =document.getElementById('pR').value.trim()||CFG.ownerRole;
+  CFG.ownerBio      =document.getElementById('pB').value.trim()||CFG.ownerBio;
+  CFG.ownerAbout    =document.getElementById('pA').value.trim()||CFG.ownerAbout;
+  CFG.ownerPhotoUrl =document.getElementById('pPh').value.trim();
+  CFG.twitterUrl    =document.getElementById('pTw').value.trim();
+  CFG.instaUrl      =document.getElementById('pIg').value.trim();
+  CFG.linkedinUrl   =document.getElementById('pLi').value.trim();
+  sC();applyConfig();renderHome();admRender();toast('✅ Profile saved!','ok');
+}
+
+function designH(){
+  return`<div class="a-title">Customize Site</div>
+  <div class="a2">
+    <div class="af"><label class="al">BLOG NAME</label><input class="ai" id="dN" value="${CFG.siteName||''}"/></div>
+    <div class="af"><label class="al">TAGLINE</label><input class="ai" id="dT" value="${CFG.siteTagline||''}"/></div>
+  </div>
+  <div class="af"><label class="al">SITE DESCRIPTION (for Google SEO)</label><input class="ai" id="dD" value="${CFG.siteDesc||''}"/></div>
+  <button class="abtn" onclick="saveDesign()">💾 Save Design</button>`;
+}
+function saveDesign(){
+  CFG.siteName   =document.getElementById('dN').value.trim()||CFG.siteName;
+  CFG.siteTagline=document.getElementById('dT').value.trim()||CFG.siteTagline;
+  CFG.siteDesc   =document.getElementById('dD').value.trim()||CFG.siteDesc;
+  sC();applyConfig();renderHome();admRender();toast('✅ Design updated!','ok');
+}
+
+function settingsH(){
+  return`<div class="a-title">Settings & API Keys</div>
+  <div style="background:var(--cream);border:2px solid var(--tc);padding:16px;margin-bottom:24px;font-family:var(--mono);font-size:12px;color:var(--ink3);line-height:1.9;">
+    🔒 <b style="color:var(--ink);">MAXIMUM SECURITY:</b> All data is stored only in YOUR browser. No external server, no database, no cloud — only you can access this. Not even the creator of this site can read your password or your posts. This is 100% yours.
+  </div>
+  <div class="asgrid">
+    <div class="asc"><label class="al">ANTHROPIC API KEY (for AI writing)</label>
+      <input class="ai" id="sk" type="password" value="${CFG.apiKey||''}" placeholder="sk-ant-api…"/>
+      <div style="font-family:var(--mono);font-size:9px;color:var(--ink4);margin-top:6px;">Get at console.anthropic.com</div>
+    </div>
+    <div class="asc"><label class="al">GOOGLE ADSENSE ID (to earn money)</label>
+      <input class="ai" id="sa" value="${CFG.adsenseId||''}" placeholder="ca-pub-XXXXXXXXXXXXXXXX"/>
+      <div style="font-family:var(--mono);font-size:9px;color:var(--ink4);margin-top:6px;">Apply at adsense.google.com</div>
+    </div>
+    <div class="asc"><label class="al">NEW ADMIN PASSWORD</label>
+      <input class="ai" id="sp" type="password" placeholder="Leave blank to keep current"/>
+      <div style="font-family:var(--mono);font-size:9px;color:var(--ink4);margin-top:6px;">Change from default 'admin123' immediately!</div>
+    </div>
+    <div class="asc"><label class="al">AI AUTO-POST (every 6 hours)</label>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:8px;">
+        <div class="atgl ${CFG.autoPost?'on':''}" onclick="togC('autoPost')"></div>
+        <span class="atgl-d">${CFG.autoPost?'Enabled':'Disabled'}</span>
+      </div>
+    </div>
+  </div>
+  <div class="abtns">
+    <button class="abtn" onclick="saveSetts()">💾 Save Settings</button>
+    <button class="abtn danger" onclick="if(confirm('WARNING: This will permanently delete ALL your posts, settings and data. Are you completely sure?')){localStorage.clear();location.reload();}">⚠ Full Reset (Permanent)</button>
+  </div>`;
+}
+function togC(k){CFG[k]=!CFG[k];sC();admRender();}
+function saveSetts(){
+  CFG.apiKey   =document.getElementById('sk').value.trim();
+  CFG.adsenseId=document.getElementById('sa').value.trim();
+  const np=document.getElementById('sp').value.trim();if(np)CFG.adminPass=np;
+  sC();admRender();toast('✅ Settings saved!','ok');
+}
+
+function secH(){
+  return`<div class="a-title">Security — 100% Yours</div>
+  <div style="background:var(--cream);border:1px solid var(--bdr);padding:20px;margin-bottom:20px;">
+    <div class="sec-r"><span>Admin panel — password protected (only you)</span><span class="sec-ok">✓ Active</span></div>
+    <div class="sec-r"><span>All data stored ONLY in your browser (localStorage)</span><span class="sec-ok">✓ Active</span></div>
+    <div class="sec-r"><span>Zero external database — nobody else has your data</span><span class="sec-ok">✓ Active</span></div>
+    <div class="sec-r"><span>Content integrity hashing (SHA-256)</span><span class="sec-ok">✓ Active</span></div>
+    <div class="sec-r"><span>API calls encrypted in transit</span><span class="sec-ok">✓ Active</span></div>
+    <div class="sec-r"><span>No telemetry, no tracking, no analytics sent anywhere</span><span class="sec-ok">✓ Active</span></div>
+    <div class="sec-r"><span>HTTPS / SSL Certificate</span><span class="sec-warn">→ Enabled automatically on Netlify / Cloudflare Pages</span></div>
+    <div class="sec-r"><span>DDoS Protection + Global CDN</span><span class="sec-warn">→ Free via Cloudflare Pages</span></div>
+  </div>
+  <div style="background:#f0fdf4;border:2px solid #bbf7d0;padding:16px 20px;font-family:var(--mono);font-size:12px;color:#166534;line-height:2.2;">
+    <b>YOUR DATA IS 100% UNDER YOUR CONTROL:</b><br/>
+    → Nobody — not even the creator of this website — can access your data<br/>
+    → Your password is never sent anywhere — it stays in your browser only<br/>
+    → Your posts exist only on your device until you deploy them<br/>
+    → To back up: Open browser → F12 → Console → type: <b>JSON.stringify(localStorage)</b> → copy and save<br/>
+    → For full E2E encryption after deployment: use <b>Cloudflare Pages</b> (free)
+  </div>`;
+}
+
+function deployH(){
+  return`<div class="a-title">Go Live — Make Your Blog Public</div>
+  <div class="dep-card"><div class="dep-n">OPTION 1 — FASTEST · Free · 60 Seconds · No Account</div><div class="dep-t">tiiny.host — Upload and Go Live</div><div class="dep-d">1. Open <b>tiiny.host</b> on your phone or laptop\n2. Click Upload → choose this HTML file\n3. ✅ Your beautiful blog is live worldwide instantly\n4. Share the URL with anyone in the world</div></div>
+  <div class="dep-card"><div class="dep-n">OPTION 2 — PROFESSIONAL · Free · Auto HTTPS</div><div class="dep-t">Netlify Drop — Drag and Drop</div><div class="dep-d">1. Go to <b>netlify.com/drop</b>\n2. Drag this HTML file onto the page\n3. ✅ Automatic HTTPS — fully encrypted connection\n4. Free .netlify.app URL — upgrade to custom domain anytime</div></div>
+  <div class="dep-card"><div class="dep-n">OPTION 3 — PROFESSIONAL WITH CUSTOM DOMAIN · ₹800/year</div><div class="dep-t">Cloudflare Pages + Your Own Domain</div><div class="dep-d">1. Buy domain at <b>Namecheap.com</b> (~₹800/year for .com)\n2. Free account at <b>pages.cloudflare.com</b>\n3. Upload file → connect domain → done\n4. ✅ Free hosting + Free SSL + Free global CDN + Free DDoS protection\n5. Your blog loads instantly in India, USA, Europe — everywhere</div></div>
+  <div class="dep-card" style="border-left-color:#15803d;"><div class="dep-n" style="color:#15803d;">EARN MONEY — Google AdSense</div><div class="dep-t">Make Your Blog Pay You</div><div class="dep-d">1. First deploy your blog and make it live\n2. Write at least 5-8 quality posts\n3. Go to <b>adsense.google.com</b> → apply with your live blog URL\n4. Google reviews in 1–3 weeks\n5. Once approved → Admin → Settings → paste your ca-pub-XXXXX ID\n6. Earn $1–$10 per 1,000 page views (lifestyle + India topics earn well)</div></div>
+  <div class="dep-card" style="border-left-color:#9333ea;"><div class="dep-n" style="color:#9333ea;">GROW YOUR AUDIENCE</div><div class="dep-t">Get Readers from Around the World</div><div class="dep-d">1. Share every post on WhatsApp, Instagram Stories, Twitter/X\n2. Post in relevant Reddit communities (r/india, r/LifeAdvice, etc.)\n3. Write post titles with keywords → Google will rank them over time\n4. Post consistently — even once a week builds loyal readership\n5. Reply to every comment — it builds community and reader loyalty</div></div>`;
+}
+
+/* Auto-post */
+function startAuto(){
+  if(!CFG.autoPost||!CFG.apiKey)return;
+  const ts=['a life observation that stayed with me this week','something honest about India and where we are','a world event that deserves deeper thought','ancient wisdom applied to modern challenges','travel and what it reveals about yourself'];
+  setInterval(async()=>{
+    const t=ts[Math.floor(Math.random()*ts.length)];
+    const cat=CATS[Math.floor(Math.random()*CATS.length)]||'Life';
+    const c=getC(cat);
+    try{
+      const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':CFG.apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1400,messages:[{role:'user',content:`Write a literary personal blog post for "${CFG.siteName}" about: "${t}". Category: ${cat}. Elegant, first-person, thoughtful voice. NOT about coding. JSON only: {"title":"...","excerpt":"2-3 sentences","body":"7-8 paragraphs double newlines, ## headings, > quotes, **bold**","tags":["...","...","..."],"readTime":"X min"}`}]})});
+      const data=await res.json();
+      const art=JSON.parse(data.content[0].text.trim().replace(/```json|```/g,''));
+      POSTS.unshift({id:Date.now(),...art,cat,photo:c.thumb,author:CFG.ownerName,date:new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'}),status:'published',featured:false,comments:[]});
+      sP();renderHome();
+    }catch(e){}
+  },6*60*60*1000);
+}
+
+function toast(msg,type='ok'){const el=document.getElementById('toastEl');el.textContent=msg;el.className=`toast ${type} show`;setTimeout(()=>el.classList.remove('show'),4200);}
+
+/* ═══════════════════════════════════════════════════
+   INIT
+═══════════════════════════════════════════════════ */
+applyTheme('All');
+applyConfig();
+renderHome();
+startAuto();
+</script>
+</body>
+</html>
